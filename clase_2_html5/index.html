@@ -17,68 +17,71 @@
 		<title>Curso Web Development</title>
 	</head>
 	<body>
-		<header><h1>HTML: Text Tags</h1></header>
-		<main>
-			<p>
-				<u>Lorem ipsum</u> <b>dolor sit amet</b>,
-				<strong>consectetur adipiscing</strong>
-				elit. <i>Aliquam eu neque laoreet</i>,
-				<em>pharetra ligula id</em>, rutrum eros.
-				<strike>In enim nibh</strike>, pretium a tristique nec,
-				porttitor sit amet nulla. Orci varius natoque penatibus et
-				magnis dis parturient montes, nascetur ridiculus mus. Duis
-				fringilla, neque at vulputate sollicitudin, lacus ex aliquam
-				neque, pretium gravida dui libero vel ante. Donec purus metus,
-				sagittis a felis convallis, laoreet maximus ligula. Morbi ac sem
-				erat. Duis sollicitudin ac sapien a porta. Pellentesque rhoncus
-				eget ante id suscipit. Sed tristique arcu vel libero posuere
-				porta.
-			</p>
-			<pre>
-				Texto pre formateado ...
-			</pre
+		<header><h1>HTML: Listas Tags</h1></header>
+		<main id="inicio">
+			<h2>Anclas | Anchors | Enlaces | Links</h2>
+			<h3>Enlace normal</h3>
+			<a href="https://youtube.com">Youtube</a>
+			<h3>Enlace en pestaña separada</h3>
+			<a href="https://youtube.com" target="_blank">Youtube</a>
+			<h3>Enlace de descarga</h3>
+			<a
+				href="./recursos/htlm-cheatsheet.png"
+				target="_blank"
+				download="Cheatsheet"
+				>CheatSheet</a
 			>
-			<h2>Etiquetas de Heading</h2>
-
-			<h1>H1</h1>
-			<h2>H2</h2>
-			<h3>H3</h3>
-			<h4>H4</h4>
-			<h5>H5</h5>
-			<h6>H6</h6>
-
-			<h2>Etiquetas de Estilo</h2>
-			<u>Underline</u>
-			<br />
-			<strong>Negrita con enfasis</strong>
-			<br />
-			<b>Negrita</b>
-			<br />
-			<em>Italica con enfasis</em>
-			<br />
-			<i>Italica</i>
-			<br />
-			<strike>Texto tachado</strike>
-			<br />
-			<sup>Indice</sup>
-			<sub>Subindice</sub>
-			<br />
-			<hr />
-			<abbr title="Facultad de Ciencias Exactas y Tecnolgía"
-				>Abreviacion</abbr
+			<h3>Enlace a contenido</h3>
+			<a href="./index.html#listas-desordenadas">Listas Desordenadas</a
+			><br />
+			<a href="https://es.wikipedia.org/wiki/Wakanda#Ubicaci%C3%B3n"
+				>Enlace a contenido externo</a
+			><br />
+			<a href="./otro.html#otro"
+				>Enlace a contenido interno en otro archivo</a
 			>
+
+			<h2 id="listas-desordenadas">Listas Desordenadas : UL</h2>
+			<ul>
+				<li class="items-desordenados">Item 1</li>
+				<li class="items-desordenados">Item 2</li>
+				<li class="items-desordenados">Item 3</li>
+				<li>
+					Item 4
+					<ul>
+						<li>Subitem 1</li>
+						<li>Subitem 2</li>
+						<li>Subitem 3</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h2>Listas Ordenadas: OL</h2>
+			<ol>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>
+					Item 3
+					<!-- type="1|a|A|i|I" start="50"-->
+					<ol type="I">
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+						<li>Item 4</li>
+					</ol>
+				</li>
+			</ol>
 			<br />
-			<cite>Cita Media</cite>
 			<br />
-			<q>Citas Pequeñas</q>
 			<br />
-			<blockquote>Cita Grande</blockquote>
 			<br />
-			<address>Bv. Illia 530. Piso 11 A. Córdoba Argentina</address>
 			<br />
-			<code>
-				function getItem(item){ return sessionStorage.getItem(item); }
-			</code>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
 		</main>
 	</body>
 </html>
