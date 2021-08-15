@@ -8,60 +8,11 @@
 		<title>Curso Web Development</title>
 	</head>
 	<body>
-		<header><h1>HTML: Imagenes</h1></header>
+		<header><h1>HTML: Video</h1></header>
 		<main id="inicio">
-			<!-- https://via.placeholder.com/150x150 -->
-			<h2>Imagen comun</h2>
-			<img
-				src="https://via.placeholder.com/150x150"
-				alt="Imagen de 150x150"
-			/>
-			<h2>Imagenes con epígrafe</h2>
-			<figure>
-				<img
-					src="https://via.placeholder.com/150x150"
-					alt="Imagen de 150x150"
-				/>
-				<figcaption>Imagen 150x150</figcaption>
-			</figure>
-			<h2>Mapas de Imagenes</h2>
-			<map name="map">
-				<area
-					shape="poly"
-					coords="50,0,0,50,100,50"
-					alt="Area Poly"
-					href="https://youtube.com"
-				/>
-				<area
-					shape="rect"
-					coords="100,0,100,100"
-					alt="Area Rect"
-					href="https://youtube.com"
-				/>
-				<area
-					shape="circle"
-					coords="100,100,100"
-					alt="Area circular"
-					href="https://youtube.com"
-				/>
-			</map>
-			<img
-				src="https://via.placeholder.com/500x500"
-				alt="Imagen de 500x500"
-				usemap="#map"
-			/>
-			<h2>Sets de Imagenes</h2>
-			<picture>
-				<source
-					media="(min-width: 1000px)"
-					srcset="https://via.placeholder.com/500x500"
-				/>
-				<source
-					media="(min-width: 500px)"
-					srcset="https://via.placeholder.com/250x250"
-				/>
-				<img src="https://via.placeholder.com/100x100" />
-			</picture>
+			<video width="300" height="300" controls autoplay muted>
+				<source src="./recursos/video.mp4" type="video/mp4" />
+			</video>
 		</main>
 	</body>
 </html>
