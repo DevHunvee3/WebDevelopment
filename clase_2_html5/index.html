@@ -8,12 +8,42 @@
 		<title>Curso Web Development</title>
 	</head>
 	<body>
-		<header><h1>HTML: Iframes</h1></header>
+		<header><h1>HTML: Tablas</h1></header>
 		<main id="inicio">
-			<iframe
-				src="https://www.youtube.com/embed/JQEnvcGl_YM"
-				allowfullscreen
-			></iframe>
+			<table border="1" style="width: 100%">
+				<thead>
+					<tr>
+						<td style="width: 200px"></td>
+						<th scope="col">Titulo Col 1</th>
+						<th colspan="2">Titulo Col 2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Titulo de fila 1</th>
+						<td>Celda 1,1</td>
+						<td colspan="2">Celda 1,2</td>
+					</tr>
+					<tr>
+						<th rowspan="0">Titulo de fila 2</th>
+						<td>Celda 2,1</td>
+						<td>Celda 2,2</td>
+						<td>Celda 2,3</td>
+					</tr>
+					<tr>
+						<td>Celda 3,1</td>
+						<td colspan="2" rowspan="2">Celda 3,2</td>
+					</tr>
+					<tr>
+						<td>Celda 4,1</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="4" align="center">Tabla</td>
+					</tr>
+				</tfoot>
+			</table>
 		</main>
 	</body>
 </html>
