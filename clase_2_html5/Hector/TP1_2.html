@@ -8,12 +8,20 @@
 	</head>
 	<body>
 		<table border="1" style="width: 100%">
-			<thead>
+			<thead id="inicio">
 				<tr>
 					<td colspan="2"><header>header</header></td>
 				</tr>
 				<tr>
-					<td colspan="2"><nav>Nav</nav></td>
+					<td colspan="2">
+						<nav>
+							<ul>
+								<li>
+									<a href="#seccion-3">Seccion 3</a>
+								</li>
+							</ul>
+						</nav>
+					</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -21,7 +29,7 @@
 					<section>
 						<tr>
 							<td><article>art1 seccion1</article></td>
-							<td rowspan="6"><aside>Aside</aside></td>
+							<td rowspan="7"><aside>Aside</aside></td>
 						</tr>
 						<tr>
 							<td><article>Art2 seccion1</article></td>
@@ -36,11 +44,14 @@
 						</tr>
 					</section>
 					<section>
-						<tr>
+						<tr id="seccion-3">
 							<td><article>art1 seccion3</article></td>
 						</tr>
 						<tr>
 							<td><article>Art2 seccion3</article></td>
+						</tr>
+						<tr>
+							<td><a href="#inicio">Volver</a></td>
 						</tr>
 					</section>
 				</main>
