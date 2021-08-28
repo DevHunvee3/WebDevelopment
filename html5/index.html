@@ -17,19 +17,35 @@
 		<title>Curso Web Development</title>
 	</head>
 	<body>
-		<header>CABECERA</header>
+		<header>Formularios</header>
 		<main>
-			<section>
-				<article>ARTICULO 1</article>
-				<article>ARTICULO 2</article>
-			</section>
-			<section>
-				<article>ARTICULO 3</article>
-				<article>ARTICULO 4</article>
-			</section>
-			<div>Etiqueta contenedora de lo que sea</div>
+			<!-- HTTP methods -> GET, POST, PUT, PATCH, DELETE -->
+			<!-- POST: se utiliza para crear un nuevo recurso -->
+			<!-- PUT: se utiliza para modificar un recurso completo (reemplazo completo) -->
+			<!-- PATCH: se utiliza para modificar un recurso (modifican partes) -->
+			<form
+				method="get"
+				action="#"
+			>
+				<input type='text' name="texto" placeholder='Ej: lala' maxlength="5" minlength="4" required></input><br/>
+				<input type='number' name="numero" min='3' max='5' step='2'></input><br/>
+				<input type='date' name='fecha'></input><br/>
+				<input type='datetime' name='fecha-hora'></input><br/>
+				<input type='datetime-local' name='fecha-hora-2'></input><br/>
+				<input type='time' name='tiempo'></input><br/>
+				<input type='week' name='semana'></input><br/>
+				<input type='range' name='rango' min='3' max='5' step='0.5'></input><br/>
+				<input type='email' name='email'></input><br/>
+				<input type='password' name='contrasenia'></input><br/>
+				<input type='url' name='url'></input><br/>
+				<input type='color' name='color'></input><br/>
+
+				<!-- for ='id del campo al que quiero aseociarme' -->
+				<label for='idName'>Nombre</label><br/>
+				<input type='text' id='idName' name='name' placeholder='Ej: John Doe'>
+
+				<button type='submit' name='boton'>Enviar</button>
+			</form>
 		</main>
-		<aside>ASIDE</aside>
-		<footer>PIE</footer>
 	</body>
 </html>
