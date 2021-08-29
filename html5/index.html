@@ -15,64 +15,52 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Curso HTML, CSS, JS, REACT" />
 		<title>Curso Web Development</title>
+		<style>
+			/* selector -> seleccionar cual o cuales etiquetas del html va a estilar. 3 tipos - etiqueta - id - clase */
+			/* propiedades -> elegir que atributos de estilo queremos cambiar de esas etiquetas */
+			/* valores -> valores para cada propiedad*/
+			/* 
+			selector{
+				propiedad:valor;
+				propiedad:valor;
+			}
+			*/
+			body header h1 {
+				color: green;
+				color: rgb(4, 0, 255);
+				color: #ff0000ff;
+				background-color: green;
+			}
+			body h1 {
+				color: blue;
+			}
+			#parrafo {
+				color: purple;
+			}
+			p {
+				color: white;
+			}
+			.parrafos {
+				color: saddlebrown;
+			}
+			.header .parrafos {
+				color: slateblue;
+			}
+			.header #parrafo1 {
+				color: saddlebrown;
+			}
+		</style>
 	</head>
 	<body>
-		<header>Formularios</header>
-		<main>
-			<!-- HTTP methods -> GET, POST, PUT, PATCH, DELETE -->
-			<!-- POST: se utiliza para crear un nuevo recurso -->
-			<!-- PUT: se utiliza para modificar un recurso completo (reemplazo completo) -->
-			<!-- PATCH: se utiliza para modificar un recurso (modifican partes) -->
-			<form
-				method="get"
-				action="#"
-			>
-				<input type='text' name="texto" placeholder='Ej: lala' maxlength="5" minlength="4" required ></input><br/>
-				<input type='number' name="numero" min='3' max='5' step='2'></input><br/>
-				<input type='date' name='fecha'></input>				
-				<input type='datetime' name='fecha-hora'></input><br/>
-				<input type='datetime-local' name='fecha-hora-2'></input><br/>
-				<input type='time' name='tiempo'></input>
-				<input type='week' name='semana'></input><br/>
-				<input type='range' name='rango' min='3' max='5' step='0.5'></input><br/>
-				<input type='email' name='email'></input><br/>
-				<input type='password' name='contrasenia'></input><br/>
-				<input type='url' name='url'></input><br/>
-				<input type='color' name='color'></input><br/>
+		<header class="header">
+			<!-- Estilo en line (inline) - Los estilos inline tienen siempre la MAYOR prioridad - ES POR ESO QUE NO SE USA INLINE -->
+			<h1>CSS3</h1>
+			<p id="parrafo1" class="parrafos">Texto1</p>
+			<p id="parrafo2" class="parrafos">Texto2</p>
+		</header>
+		<p id="parrafo3" class="parrafos">Texto3</p>
+		<h1 style="color: red">Otro</h1>
 
-				<!-- for ='id del campo al que quiero aseociarme' -->
-				<label for='idName'>Nombre</label><br/>
-				<input type='text' id='idName' name='name' placeholder='Ej: John Doe'><br/>
-				<br/>
-				<textarea rows='5' cols='20' placeholder="Ej. placeholder">Valor por defecto</textarea>
-				<br/>
-				<h2>Etiquetas de seleccion</h2><br/>
-				<input type='radio' name='sex' value='m'>Masculino</input>
-				<input type='radio' name='sex' value='f' checked>Femenino</input>
-				<input type='radio' name='sex' value='o'>Otros</input>
-				<br/>
-				
-				<input type='checkbox' name='opcion_1' >Opcion 1</input>
-				<input type='checkbox' name='opcion_2'checked>Opcion 2</input>
-				<input type='checkbox' name='opcion_3'>Opcion 3</input>
-				<br/>
-				<select name='select'>
-					<option value='opcion_1'>Opcion 1</option>
-					<option value='opcion_2' selected>Opcion 2</option>
-					<option value='opcion_3'>Opcion 3</option>
-				</select>
-
-				<fieldset>
-					<legend>Informacion Personal</legend>
-					<input type='text' name='nombre' placeholder='Nombre'/>
-					<input type='text' name='nombre' placeholder='Nombre'/>
-					<input type='text' name='nombre' placeholder='Nombre'/>
-					<input type='text' name='nombre' placeholder='Nombre'/>
-					<input type='text' name='nombre' placeholder='Nombre'/>
-				</fieldset>
-
-				<button type='submit' name='boton'>Enviar</button>
-			</form>
-		</main>
+		<div>Contenido</div>
 	</body>
 </html>
