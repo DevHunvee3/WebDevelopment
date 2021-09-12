@@ -13,17 +13,69 @@
 			<nav>
 				<li><a href="./Index.html">Inicio</a></li>
 				<li>
-					<a href="#" target="_blank">Video de presentación</a>
+					<a href="#">Suscripcion</a>
 				</li>
 			</nav>
-			<main>
-				<section>Video</section>
-				<video src="" muted loop></video>
-				<section>Descripción</section>
-				<h2></h2>
-				<section>Precios</section>
-				<table></table>
-			</main>
+
+			<div>
+				<h2>Formulario de suscripción</h2>
+				<form action="suscription.php" method="GET">
+					<fieldset>
+						<legend>Información Personal</legend>
+						Apellido:
+						<input name="apellido" type="text" required /> Nombre:
+						<input name="nombre" type="text" required /> Teléfono:
+						<input name="telefono" type="number" required /> Fecha
+						de Nac:
+						<input name="fechaNac" type="date" required /> Email:
+						<input name="mail" type="email" required />
+					</fieldset>
+
+					<fieldset>
+						<legend>suscripción</legend>
+						Tipo <br />
+						Free
+						<input type="radio" name="tipo" value="free" /> Plus
+						<input type="radio" name="tipo" value="plus" /> Pro
+						<input type="radio" name="tipo" value="pro" /> <br />
+						Intereses: <br />
+						Interes 1<input type="checkbox" /> Interes 2<input
+							type="checkbox"
+						/>
+						Interes 3<input type="checkbox" />
+					</fieldset>
+
+					<fieldset>
+						<legend>Pago</legend>
+						Numero de tarjeta:
+						<input
+							type="number"
+							name="numtj"
+							min="0"
+							max="9999999999999999"
+							required
+						/>
+						Vencimiento: <input type="month" name="vto" required />
+						Código de seguridad:
+						<input
+							type="number"
+							name="cod"
+							min="0"
+							max="999"
+							required
+						/>
+						Cuotas:
+						<select name="cuotas" id="cuota">
+							<option value="1">1</option>
+							<option value="3">3</option>
+							<option value="6">6</option>
+							<option value="9">9</option>
+							<option value="12">12</option>
+						</select>
+					</fieldset>
+					<input type="submit" value="enviar" name="valores" />
+				</form>
+			</div>
 		</header>
 	</body>
 </html>
