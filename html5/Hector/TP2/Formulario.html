@@ -16,5 +16,41 @@
 				</ul>
 			</nav>
 		</header>
+        <main>
+            <form method="get" action="#">
+                <fieldset>
+                    <legend>Informacion personal</legend>
+                    <label for='idSurname'>Apellido</label>
+                    <input
+                    type='text'
+                    id='idSurname'
+                    name="Surname"
+                    placeholder='Ej: Quintana'
+                    required>
+                    </input>
+                    <label for='idName'>Nombre</label>
+                    <input
+                    type='text'
+                    id='idName'
+                    name="Name"
+                    placeholder='Ej: Hector'
+                    required>
+                    </input>
+                    <label for='idNumero'>Telefono</label>
+                    <input type='number'
+                    name="numero"
+                    id='idNumero'
+                    maxlength="10"
+                    minlength="10"
+                    required>
+                    </input>
+                    <label for='idDate'>Fecha de Nac.</label>
+                    <input type='date' id='idDate' name='fecha'></input>
+                    <label for='idEmail'>email</label>
+                    <input type='email' id='idEmail'  name='email'></input>
+                </fieldset>
+                
+            </form>
+        </main>
 	</body>
 </html>
