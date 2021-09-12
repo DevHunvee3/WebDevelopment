@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Curso HTML, CSS, JS, REACT" />
+		<title>Curso Web Development</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav>
+				<ul>
+					<li><a href="./Principal.html">Principal</a></li>
+					<li><a href="#">Suscribite</a></li>
+				</ul>
+			</nav>
+		</header>
+        <main>
+            <form method="get" action="#">
+                <fieldset>
+                    <legend>Informacion personal</legend>
+                    <label for='idSurname'>Apellido</label>
+                    <input
+                    type='text'
+                    id='idSurname'
+                    name="Surname"
+                    placeholder='Ej: Quintana'
+                    required>
+                    </input>
+                    <label for='idName'>Nombre</label>
+                    <input
+                    type='text'
+                    id='idName'
+                    name="Name"
+                    placeholder='Ej: Hector'
+                    required>
+                    </input>
+                    <label for='idNumero'>Telefono</label>
+                    <input type='number'
+                    name="numero"
+                    id='idNumero'
+                    maxlength="10"
+                    minlength="10"
+                    required>
+                    </input>
+                    <label for='idDate'>Fecha de Nac.</label>
+                    <input type='date' id='idDate' name='fecha'></input>
+                    <label for='idEmail'>email</label>
+                    <input type='email' id='idEmail'  name='email'></input>
+                </fieldset>
+                
+            </form>
+        </main>
+	</body>
+</html>
