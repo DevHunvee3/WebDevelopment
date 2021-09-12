@@ -17,7 +17,7 @@
 			</nav>
 		</header>
         <main>
-            <form method="get" action="#">
+            <form method="POST" action="suscripcion.php">
                 <fieldset>
                     <legend>Informacion personal</legend>
                     <label for='idSurname'>Apellido</label>
@@ -49,7 +49,30 @@
                     <label for='idEmail'>email</label>
                     <input type='email' id='idEmail'  name='email'></input>
                 </fieldset>
-                
+                <fieldset>
+                     <legend>Suscripcion</legend>   
+                     <lebel>Tipo:</lebel><br>
+                     <label for='idGratis'>Gratis</label>
+                     <input type='radio' id=idGratis name='Tipo' value='G'></input>
+                     <label for='idPlus'>Plus</label>
+                     <input type='radio' id=idPlus name='Tipo'value='P'></input>
+                     <label for='idPro'>Pro</label>
+                     <input type='radio' id=idPro name='Tipo' value='Pr'></input><br>
+                     <lebel>Intereses:</lebel><br>
+                     <label for='idInteres1'>Interes 1</label>
+                     <input type='checkbox' id=idInteres1 name='Interes1'></input>
+                     <label for='idInteres2'>Interes 2</label>
+                     <input type='checkbox' id=idInteres2 name='Interes2'></input>
+                     <label for='idInteres3'>Interes 3</label>
+                     <input type='checkbox' id=idInteres3 name='Interes3'></input>
+                </fieldset>
+                <fielset>
+                    <legend>Pago</legend> 
+                    <label for='idTarjeta'>Telefono</label>
+                    <input type='number' name="tarjeta" id='idTarjeta' required>
+                    </input>
+                </fielset>
+               
             </form>
         </main>
 	</body>
