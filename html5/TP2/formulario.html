@@ -16,5 +16,114 @@
 				</ul>
 			</nav>
 		</header>
+		<main>
+			<section>
+				<form method="POST" action="suscription.php">
+					<fieldset>
+						<legend>Información Personal</legend>
+						<label for="_surname">Apellido:</label>
+						<input
+							id="_surname"
+							name="surname"
+							type="text"
+							required
+						/>
+						<label for="_name">Nombre:</label>
+						<input id="_name" name="name" type="text" required />
+						<label for="_phone">Teléfono:</label>
+						<input id="_phone" name="phone" type="text" required />
+						<label for="_birthday">Fecha de Nac:</label>
+						<input
+							id="_birthday"
+							name="birthday"
+							type="date"
+							required
+						/>
+						<label for="_email">Email:</label>
+						<input id="_email" name="email" type="email" required />
+					</fieldset>
+					<fieldset>
+						<legend>Suscripión</legend>
+						<label for="_free">Tipo:</label><br />
+						<label for="_free">Gratis</label>
+						<input
+							id="_free"
+							type="radio"
+							name="type"
+							value="free"
+							required
+						/>
+						<label for="_plus">Plus</label>
+						<input
+							id="_plus"
+							type="radio"
+							name="type"
+							value="plus"
+						/>
+						<label for="_pro">Pro</label>
+						<input
+							id="_pl_prous"
+							type="radio"
+							name="type"
+							value="pro"
+						/>
+						<br />
+						<label for="_interest1">Intereses:</label><br />
+						<label for="_interest1">Interes 1</label>
+						<input
+							id="_interest1"
+							type="checkbox"
+							name="interests"
+							value="int_1"
+						/>
+						<label for="_interest2">Interes 2</label>
+						<input
+							id="_interest2"
+							type="checkbox"
+							name="interests"
+							value="int_2"
+						/>
+						<label for="_interest3">Interes 3</label>
+						<input
+							id="_interest3"
+							type="checkbox"
+							name="interests"
+							value="int_3"
+						/>
+					</fieldset>
+					<fieldset>
+						<legend>Pago</legend>
+						<label for="_cardnumber">Numero de Tarjeta:</label>
+						<input
+							id="_cardnumber"
+							name="cardnumber"
+							type="number"
+							min="1000000000000000"
+							max="9999999999999999"
+							required
+						/>
+						<label for="_date">Fecha Venc:</label>
+						<input id="_date" name="date" type="month" required />
+						<label for="_code">Codigo de Seguridad:</label>
+						<input
+							id="_code"
+							name="code"
+							type="number"
+							min="0"
+							max="999"
+							required
+						/>
+						<label for="_quota">Cuotas</label>
+						<select id="_quota" name="quota" required>
+							<option value="1">1</option>
+							<option value="3">3</option>
+							<option value="6">6</option>
+							<option value="12">12</option>
+						</select>
+					</fieldset>
+					<button type="submit">ENVIAR</button>
+				</form>
+			</section>
+		</main>
 	</body>
 </html>
