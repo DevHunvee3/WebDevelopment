@@ -6,6 +6,58 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Curso HTML, CSS, JS, REACT" />
 		<title>Curso Web Development</title>
+        <style>
+            main{
+                margin-left: 260px;
+                margin-right: 260px;
+            }
+            fieldset {
+				border-color: aqua;
+                border-radius: 10px;
+			}
+            legend {
+                color:aqua;
+            }
+            #idSurname{
+                margin-bottom: 15px;
+                width: 300px;
+            }
+            #idName{
+                width: 340px;
+            }
+            #idNumero{
+                margin-bottom: 15px;
+                width: 300px;
+            }
+            #idDate{
+                width: 300px;
+            }
+            table{
+                margin-bottom: 15px;
+                width: 160%;
+                }
+            #idTarjeta{
+                margin-bottom: 15px;
+                width: 82%
+                }
+            #idMonth{
+                margin-bottom: 15px;
+                margin-right: 90px;
+            }
+            #idCodigo{
+                margin-right: 125px;
+            }
+            button{
+                margin-top: 15px;
+                margin-left: 250px;
+                width: 300px;
+                background-color: aqua;
+                border-color: aqua;
+                border-radius: 15px;
+            }         
+
+        </style>
+        
 	</head>
 	<body>
 		<header class="header">
@@ -17,63 +69,86 @@
 			</nav>
 		</header>
         <main>
-            <form method="POST" action="suscripcion.php">
-                <fieldset>
-                    <legend>Informacion personal</legend>
-                    <label for='idSurname'>Apellido</label>
-                    <input
-                    type='text'
-                    id='idSurname'
-                    name="Surname"
-                    placeholder='Ej: Quintana'
-                    required>
-                    </input>
-                    <label for='idName'>Nombre</label>
-                    <input
-                    type='text'
-                    id='idName'
-                    name="Name"
-                    placeholder='Ej: Hector'
-                    required>
-                    </input>
-                    <label for='idNumero'>Telefono</label>
-                    <input type='number'
-                    name="numero"
-                    id='idNumero'
-                    maxlength="10"
-                    minlength="10"
-                    required>
-                    </input>
-                    <label for='idDate'>Fecha de Nac.</label>
-                    <input type='date' id='idDate' name='fecha'></input>
-                    <label for='idEmail'>email</label>
-                    <input type='email' id='idEmail'  name='email'></input>
-                </fieldset>
-                <fieldset>
-                     <legend>Suscripcion</legend>   
-                     <lebel>Tipo:</lebel><br>
-                     <label for='idGratis'>Gratis</label>
-                     <input type='radio' id=idGratis name='Tipo' value='G'></input>
-                     <label for='idPlus'>Plus</label>
-                     <input type='radio' id=idPlus name='Tipo'value='P'></input>
-                     <label for='idPro'>Pro</label>
-                     <input type='radio' id=idPro name='Tipo' value='Pr'></input><br>
-                     <lebel>Intereses:</lebel><br>
-                     <label for='idInteres1'>Interes 1</label>
-                     <input type='checkbox' id=idInteres1 name='Interes1'></input>
-                     <label for='idInteres2'>Interes 2</label>
-                     <input type='checkbox' id=idInteres2 name='Interes2'></input>
-                     <label for='idInteres3'>Interes 3</label>
-                     <input type='checkbox' id=idInteres3 name='Interes3'></input>
-                </fieldset>
-                <fielset>
-                    <legend>Pago</legend> 
-                    <label for='idTarjeta'>Telefono</label>
-                    <input type='number' name="tarjeta" id='idTarjeta' required>
-                    </input>
-                </fielset>
-               
-            </form>
+            <section>
+                <form method="GET" action="suscripcion.php">
+                    <fieldset>
+                        <legend>Informacion personal</legend>
+                        <label for='idSurname'>Apellido</label>
+                        <input
+                        type='text'
+                        id='idSurname'
+                        name="Surname"
+                        placeholder='Ej: Quintana'
+                        required>
+                        </input>
+                        <label for='idName'>Nombre</label>
+                        <input
+                        type='text'
+                        id='idName'
+                        name="Name"
+                        placeholder='Ej: Hector'
+                        required>
+                        </input><br>
+
+                        <label for='idNumero'>Telefono</label>
+                        <input type='number'
+                        name="numero"
+                        id='idNumero'
+                        max="9999999999"
+                        min="1000000000"
+                        required>
+                        </input>
+                        <label for='idDate'>Fecha de Nac.</label>
+                        <input type='date' id='idDate' name='fecha' required></input><br>
+
+                        <label for='idEmail'>email</label>
+                        <input type='email' id='idEmail'  name='email'required></input>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Suscripcion</legend>   
+                        <table>
+                            <tr>
+                                <td>
+                                    <lebel>Tipo:</lebel><br>
+                                    <label for='idGratis'>Gratis</label>
+                                    <input type='radio' id=idGratis name='Tipo' value='G'required></input>
+                                    <label for='idPlus'>Plus</label>
+                                    <input type='radio' id=idPlus name='Tipo'value='P'></input>
+                                    <label for='idPro'>Pro</label>
+                                    <input type='radio' id=idPro name='Tipo' value='Pr'></input>
+                                </td>
+                                <td>
+                                    <lebel>Intereses:</lebel><br>
+                                    <label for='idInteres1'>Interes 1</label>
+                                    <input type='checkbox' id=idInteres1 name='Interes1'></input>
+                                    <label for='idInteres2'>Interes 2</label>
+                                    <input type='checkbox' id=idInteres2 name='Interes2'></input>
+                                    <label for='idInteres3'>Interes 3</label>
+                                    <input type='checkbox' id=idInteres3 name='Interes3'></input>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Pago</legend> 
+                        <label for='idTarjeta'>Numero de tarjeta</label>
+                        <input type='number' name="tarjeta" id='idTarjeta' min="1000000000000000" max="9999999999999999" required>
+                        </input><br>
+                        <label for='idMonth'>Fecha de Nac.</label>
+                        <input type='month' id='idMonth' name='Month'required></input>
+                        <label for='idCodigo'>Codigo de seg.</label>
+                        <input type='number' name="codigo" id='idCodigo' min='0' max='999' required></input> 
+                        <label for="idQuote">Cuotas</label>
+                        <select id="idQuota" name="quote" required>
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                            <option value="12">12</option>
+                        </select>
+                    </fieldset>
+                    <button type="submit" >Enviar</button>
+                </form>
+            </section>
         </main>
 	</body>
 </html>
