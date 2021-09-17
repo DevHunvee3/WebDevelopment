@@ -19,53 +19,99 @@
 
 			<div>
 				<h2>Formulario de suscripción</h2>
-				<form action="suscription.php" method="GET">
+				<form action="suscription.php" method="POST">
 					<fieldset>
 						<legend>Información Personal</legend>
-						Apellido:
-						<input name="apellido" type="text" required /> Nombre:
-						<input name="nombre" type="text" required /> Teléfono:
-						<input name="telefono" type="number" required /> Fecha
-						de Nac:
-						<input name="fechaNac" type="date" required /> Email:
-						<input name="mail" type="email" required />
+						<label for="idApellido">Apellido:</label>
+						<input
+							name="apellido"
+							type="text"
+							id="idApellido"
+							required
+						/>
+						<label for="idNombre">Nombre:</label>
+						<input
+							name="nombre"
+							type="text"
+							id="idNombre"
+							required
+						/>
+						<label for="idTelefono">Teléfono:</label>
+						<input
+							name="telefono"
+							type="number"
+							id="idTelefono"
+							required
+						/>
+						<label for="idFecNac">Fecha de Nac</label>
+						<input
+							name="fechaNac"
+							type="date"
+							id="idFecNac"
+							required
+						/>
+						<label for="idEmail">E-mail:</label>
+						<input name="mail" type="email" id="idEmail" required />
 					</fieldset>
 
 					<fieldset>
 						<legend>suscripción</legend>
-						Tipo <br />
-						Free
-						<input type="radio" name="tipo" value="free" /> Plus
-						<input type="radio" name="tipo" value="plus" /> Pro
-						<input type="radio" name="tipo" value="pro" /> <br />
-						Intereses: <br />
-						Interes 1<input type="checkbox" /> Interes 2<input
-							type="checkbox"
+						<label for="idFree">Tipo: </label> <br />
+						<label for="idFree">Free</label>
+						<input
+							type="radio"
+							name="tipo"
+							value="free"
+							id="idFree"
 						/>
-						Interes 3<input type="checkbox" />
+						<label for="idPlus">Plus</label>
+						<input
+							type="radio"
+							name="tipo"
+							value="plus"
+							id="idPlus"
+						/>
+						<label for="idPro">Pro</label>
+						<input
+							type="radio"
+							name="tipo"
+							value="pro"
+							id="idPro"
+						/>
+						<br />
+						<label for="idAxies">Intereses:</label> <br />
+						<label for="idAxies">Axies Infinity</label>
+						<input type="checkbox" id="idAxies" />
+						<label for="idPvU">Plantas vs Undead</label>
+						<input type="checkbox" id="idPvU" />
+						<label for="idMI">Mosnta Infinity</label>
+						<input type="checkbox" id="idMI" />
 					</fieldset>
 
 					<fieldset>
 						<legend>Pago</legend>
-						Numero de tarjeta:
+						<label for="idNT">Numero de tarjeta:</label>
 						<input
 							type="number"
 							name="numtj"
 							min="0"
 							max="9999999999999999"
+							id="idNT"
 							required
 						/>
-						Vencimiento: <input type="month" name="vto" required />
-						Código de seguridad:
+						<label for="idVtoT">Vencimiento:</label>
+						<input type="month" name="vto" id="idVtoT" required />
+						<label for="idCodT">Código de seguridad:</label>
 						<input
 							type="number"
 							name="cod"
 							min="0"
 							max="999"
+							id="idCodT"
 							required
 						/>
-						Cuotas:
-						<select name="cuotas" id="cuota">
+						<label for="cuota">Cuotas</label>
+						<select name="cuotas" id="cuota" required>
 							<option value="1">1</option>
 							<option value="3">3</option>
 							<option value="6">6</option>
