@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS3 - Posicionamiento</title>
+
+		<style>
+			.flex-container {
+				display: flex;
+				height: 300px;
+			}
+			.flex-row {
+				flex-direction: row;
+			}
+			.flex-column {
+				flex-direction: column;
+			}
+			.flex-row-reverse {
+				flex-direction: row-reverse;
+			}
+			.flex-column-reverse {
+				flex-direction: column-reverse;
+			}
+			.flex-wrap {
+				flex-wrap: wrap;
+			}
+			.flex-wrap-reverse {
+				flex-wrap: wrap-reverse;
+			}
+			.flex-nowrap {
+				flex-wrap: nowrap;
+			}
+			/* flex-flow e sun shortcut de flex-direccion + flex-wrap */
+			.flex-flow {
+				flex-flow: column wrap;
+			}
+			.flex-justify-content {
+				/* Alinea los elementos en el eje principal */
+				/* justify-content: flex-start; */
+				/* justify-content: flex-end; */
+				/* justify-content: center; */
+				/* justify-content: space-around; */
+				justify-content: space-evenly;
+			}
+			.flex-align-items {
+				/* Alinea los elementos en el eje secundario */
+				/* align-items: flex-start; */
+				/* align-items: flex-end; */
+				/* align-items: center; */
+				align-items: stretch;
+			}
+			.flex-align-content {
+				/* Solo funciona con flex-wrap: wrap */
+				flex-wrap: wrap;
+				align-content: flex-end;
+			}
+			.flex-gap {
+				/* row-gap: 40px;
+				column-gap: 20px; */
+				gap: 30px 10px;
+			}
+			.margin {
+				margin-top: 10px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				margin-left: 10px;
+				/* margin: ejeY ejeX */
+				margin: 10px 30px;
+				/* margin: top right bottom left */
+				margin: 10px 30px 60px 80px;
+			}
+			.padding {
+				padding-top: 10px;
+				padding-right: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				/* padding: ejeY ejeX */
+				padding: 10px 30px;
+				/* padding: top right bottom left */
+				padding: 10px 30px 60px 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Propiedad Display : block</h1>
+		<div style="display: block">Esto es un Bloque</div>
+		<div>Otro Bloque</div>
+		<h1>Propiedad Display : inline</h1>
+		<div style="display: inline">Esto es un Bloque Inline</div>
+		<div style="display: inline">Otro Bloque</div>
+		<h1>Propiedad Display : inline-block</h1>
+		<div style="display: inline-block">Esto es un Bloque Inline Block</div>
+		<div style="display: inline-block">Otro Bloque</div>
+		<!-- FLEXBOX -->
+		<h1>Propiedad Display : flex</h1>
+		<!-- Es un Contenedor de otros elementos -->
+		<div class="flex-container" style="margin: 10px 20px">
+			<div style="order: 2">Elemento1</div>
+			<div style="order: 1">Elemento2</div>
+			<div style="order: 3">Elemento3</div>
+			<div style="order: 5">Elemento4</div>
+			<div style="order: 3">Elemento5</div>
+			<div style="order: 6">Elemento6</div>
+		</div>
+	</body>
+</html>
