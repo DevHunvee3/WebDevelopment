@@ -18,46 +18,70 @@ colores:
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Examen 1: Tarjeta</title>
-	</head>
-	<body class="body-tarjeta">
 		<style>
-			.body-tarjeta {
+			body {
 				display: flex;
-				justify-content: center;
+				flex-wrap: wrap;
+				gap: 20px;
 			}
-
-			.tamaño-tarjeta {
-				box-shadow: 0px 0px 3px gray;
-				border-radius: 10px;
+			.card {
+				display: flex;
+				flex-direction: column;
 				width: 200px;
+				margin: 0 auto;
+				box-shadow: 0px 0px 5px #0005;
+				border-radius: 5px;
+				background-color: white;
 			}
-
-			/* .separacion {
-				border: 1px;
-				color: dimgray;
-			} */
-
-			.BtnAceptar {
+			.card-header,
+			.card-footer,
+			.card-body {
+				padding: 5px;
+			}
+			.card-header h2 {
+				margin: 0;
+			}
+			.card-body {
+				border-top: 1px solid #eee;
+				border-bottom: 1px solid #eee;
+			}
+			.card-footer form {
+				display: flex;
+				justify-content: flex-end;
+				gap: 10px;
+			}
+			.primary {
 				background-color: blue;
+				border: none;
+				border-radius: 5px;
+				color: white;
+				padding: 5px;
+			}
+			.secondary {
+				background-color: lightgrey;
+				border: none;
+				border-radius: 5px;
+				color: black;
+				padding: 5px;
 			}
 		</style>
-
-		<div class="tamaño-tarjeta">
-			<div class="separacion">
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
 				<h2>Card Title</h2>
 			</div>
-			<div class="separacion"></div>
-			<div>
+			<div class="card-body">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
 				sollicitudin sem non lacus scelerisque scelerisque. Fusce id
 				volutpat sapien. Aliquam gravida tincidunt enim at consequat.
 				Nullam eu posuere velit. Etiam vitae sagittis libero, eu porta
 				odio.
 			</div>
-			<div>
+			<div class="card-footer">
 				<form>
-					<button class="BtnAceptar">Aceptar</button>
-					<button class="BtnCancelar">Cancelar</button>
+					<button class="primary">Aceptar</button>
+					<button class="secondary">Cancelar</button>
 				</form>
 			</div>
 		</div>
