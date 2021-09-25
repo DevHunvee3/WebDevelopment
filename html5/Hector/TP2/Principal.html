@@ -67,29 +67,39 @@
 				border-bottom: 1px solid #fff;
 				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
 			}
-			.div1 {
-				margin-left: 15px;
-				width: 50%;
+			.titulo,
+			.precio,
+			.listas,
+			.botones {
+				display: flex;
+				background-color: seashell;
+				justify-content: space-around;
 			}
-			.div2 {
-				margin-left: 15px;
-				width: 50%;
-				height: 300px;
+			.titulo h2 {
+				width: 200px;
+				margin: 15px;
+			}
+			.precio h6 {
+				width: 200px;
+				margin: 0px 15px 15px 15px;
+				text-align: center;
+				font-size: 15px;
 				background-color: silver;
 				border-bottom: 1px solid #fff;
 				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
 			}
-
-			.ul1 {
+			.listas ul {
 				list-style: none;
-				width: 50%;
-				margin-left: 15px;
-				padding: 0px;
+				padding-left: 15px;
+				margin: 0px 15px 15px 15px;
+				width: 200px;
+				background-color: silver;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
 			}
-
 			.a1 {
 				list-style: none;
-				width: 50%;
+				width: 70px;
 				margin-left: 15px;
 				padding: 7px 13px;
 				text-decoration: none;
@@ -133,63 +143,43 @@
 					Tuscaloosa Alabama, EE. UU.
 				</p>
 			</section>
-			<section class="section">
-				<table style="width: 100%">
-					<tbody>
-						<tr>
-							<td><h2>Free</h2></td>
-							<td><h2>Plus</h2></td>
-							<td><h2>Pro</h2></td>
-						</tr>
-					</tbody>
-					<tbody>
-						<tr class="tr">
-							<td>
-								<div class="div2">
-									<div class="div1">$0</div>
-									<ul class="ul1">
-										<li>Aire Acondicionado</li>
-										<li>Air Bags</li>
-									</ul>
-									<a class="a1" href="Formulario.html"
-										>Comprar</a
-									>
-								</div>
-							</td>
-							<td>
-								<div class="div2">
-									<div class="div1">$10000</div>
-									<ul class="ul1">
-										<li>Aire Acondicionado</li>
-										<li>Air Bags</li>
-										<li>Caja de sexta</li>
-										<li>Camara tracera</li>
-									</ul>
-									<a class="a1" href="Formulario.html"
-										>Comprar</a
-									>
-								</div>
-							</td>
-							<td>
-								<div class="div2">
-									<div class="div1">$20000</div>
-									<ul class="ul1">
-										<li>Aire Acondicionado</li>
-										<li>Air Bags</li>
-										<li>Caja de sexta</li>
-										<li>Camara tracera</li>
-										<li>Frenos sincronizados</li>
-										<li>Computadora A Bordo</li>
-										<li>Llantas de fibra de carbono</li>
-									</ul>
-									<a class="a1" href="Formulario.html"
-										>Comprar</a
-									>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+			<section>
+				<div class="titulo">
+					<h2>Free</h2>
+					<h2>Plus</h2>
+					<h2>Pro</h2>
+				</div>
+				<div class="precio">
+					<h6>$0</h6>
+					<h6>$10.000</h6>
+					<h6>$20.000</h6>
+				</div>
+				<div class="listas">
+					<ul>
+						<li>Aire Acondicionado</li>
+						<li>Air Bags</li>
+					</ul>
+					<ul>
+						<li>Aire Acondicionado</li>
+						<li>Air Bags</li>
+						<li>Caja de sexta</li>
+						<li>Camara tracera</li>
+					</ul>
+					<ul>
+						<li>Aire Acondicionado</li>
+						<li>Air Bags</li>
+						<li>Caja de sexta</li>
+						<li>Camara tracera</li>
+						<li>Frenos sincronizados</li>
+						<li>Computadora A Bordo</li>
+						<li>Llantas de fibra de carbono</li>
+					</ul>
+				</div>
+				<div class="botones">
+					<a class="a1" href="Formulario.html">Comprar</a>
+					<a class="a1" href="Formulario.html">Comprar</a>
+					<a class="a1" href="Formulario.html">Comprar</a>
+				</div>
 			</section>
 		</main>
 	</body>
