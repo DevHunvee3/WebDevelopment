@@ -6,11 +6,118 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Curso HTML, CSS, JS, REACT" />
 		<title>Curso Web Development</title>
+		<style>
+			.menu {
+				background-color: #e9183b;
+				height: 75px;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			.logo {
+				color: white;
+				font-size: 35px;
+				font-weight: bold;
+				padding: 0 80px;
+			}
+			.menu_item {
+				display: flex;
+				list-style: none;
+				margin-right: 30px;
+			}
+			.menu_item li {
+				border-radius: 3px;
+				margin: 0 5px;
+			}
+			.menu_item li a {
+				padding: 7px 13px;
+				text-decoration: none;
+				font-size: 18px;
+				display: block;
+				color: white;
+			}
+			.menu_item li:hover {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+			.video {
+				margin-top: 5px;
+				width: 100%;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			.section {
+				background-color: seashell;
+				padding-top: 25px;
+				padding-bottom: 25px;
+			}
+			h2 {
+				margin-left: 15px;
+				width: 50%;
+				background-color: silver;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			p {
+				margin-left: 15px;
+				width: 50%;
+				background-color: silver;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			.titulo,
+			.precio,
+			.listas,
+			.botones {
+				display: flex;
+				background-color: seashell;
+				justify-content: space-around;
+			}
+			.titulo h2 {
+				width: 200px;
+				margin: 15px;
+			}
+			.precio h6 {
+				width: 200px;
+				margin: 0px 15px 15px 15px;
+				text-align: center;
+				font-size: 15px;
+				background-color: silver;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			.listas ul {
+				list-style: none;
+				padding-left: 15px;
+				margin: 0px 15px 15px 15px;
+				width: 200px;
+				background-color: silver;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			.a1 {
+				list-style: none;
+				width: 70px;
+				margin-left: 15px;
+				padding: 7px 13px;
+				text-decoration: none;
+				font-size: 18px;
+				display: block;
+				color: white;
+				background-color: #e9183b;
+			}
+			.a1:hover {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+		</style>
 	</head>
 	<body>
 		<header class="header">
-			<nav>
-				<ul>
+			<nav class="menu">
+				<label class="logo">Lamborghini</label>
+				<ul class="menu_item">
 					<li><a href="#">Principal</a></li>
 					<li><a href="./formulario.html">Suscribite</a></li>
 				</ul>
@@ -18,11 +125,11 @@
 		</header>
 		<main>
 			<section>
-				<video autoplay muted loop>
+				<video class="video" autoplay muted loop>
 					<source src="Lamborghini.mp4" />
 				</video>
 			</section>
-			<section>
+			<section class="section">
 				<h2>LANBORGHINI, un encuentro cercano del tercer tipo</h2>
 				<p>
 					Maybach se está volviendo eléctrico. En el IAA de Múnich,
@@ -37,50 +144,42 @@
 				</p>
 			</section>
 			<section>
-				<table style="width: 100%">
-					<tbody>
-						<tr>
-							<td><h2>Free</h2></td>
-							<td><h2>Plus</h2></td>
-							<td><h2>Pro</h2></td>
-						</tr>
-					</tbody>
-					<tbody>
-						<tr>
-							<td>
-								<div>$0</div>
-								<ul>
-									<li>Aire Acondicionado</li>
-									<li>Air Bags</li>
-								</ul>
-								<a href="Formulario.html">Comprar</a>
-							</td>
-							<td>
-								<div>$10000</div>
-								<ul>
-									<li>Aire Acondicionado</li>
-									<li>Air Bags</li>
-									<li>Caja de sexta</li>
-									<li>Camara tracera</li>
-								</ul>
-								<a href="Formulario.html">Comprar</a>
-							</td>
-							<td>
-								<div>$20000</div>
-								<ul>
-									<li>Aire Acondicionado</li>
-									<li>Air Bags</li>
-									<li>Caja de sexta</li>
-									<li>Camara tracera</li>
-									<li>Frenos sincronizados</li>
-									<li>Computadora A Bordo</li>
-									<li>Llantas de fibra de carbono</li>
-								</ul>
-								<a href="Formulario.html">Comprar</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<div class="titulo">
+					<h2>Free</h2>
+					<h2>Plus</h2>
+					<h2>Pro</h2>
+				</div>
+				<div class="precio">
+					<h6>$0</h6>
+					<h6>$10.000</h6>
+					<h6>$20.000</h6>
+				</div>
+				<div class="listas">
+					<ul>
+						<li>Aire Acondicionado</li>
+						<li>Air Bags</li>
+					</ul>
+					<ul>
+						<li>Aire Acondicionado</li>
+						<li>Air Bags</li>
+						<li>Caja de sexta</li>
+						<li>Camara tracera</li>
+					</ul>
+					<ul>
+						<li>Aire Acondicionado</li>
+						<li>Air Bags</li>
+						<li>Caja de sexta</li>
+						<li>Camara tracera</li>
+						<li>Frenos sincronizados</li>
+						<li>Computadora A Bordo</li>
+						<li>Llantas de fibra de carbono</li>
+					</ul>
+				</div>
+				<div class="botones">
+					<a class="a1" href="Formulario.html">Comprar</a>
+					<a class="a1" href="Formulario.html">Comprar</a>
+					<a class="a1" href="Formulario.html">Comprar</a>
+				</div>
 			</section>
 		</main>
 	</body>

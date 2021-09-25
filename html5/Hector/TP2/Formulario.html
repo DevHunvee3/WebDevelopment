@@ -7,71 +7,126 @@
 		<meta name="description" content="Curso HTML, CSS, JS, REACT" />
 		<title>Curso Web Development</title>
         <style>
+            
+            .menu {
+				background-color: #e9183b;
+				height: 75px;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			.logo {
+				color: white;
+				font-size: 35px;
+				font-weight: bold;
+				padding: 0 80px;
+			}
+			.menu_item {
+				display: flex;
+				list-style: none;
+				margin-right: 30px;
+			}
+			.menu_item li {
+				border-radius: 3px;
+				margin: 0 5px;
+			}
+			.menu_item li a {
+				padding: 7px 13px;
+				text-decoration: none;
+				font-size: 18px;
+				display: block;
+				color: white;
+			}
+			.menu_item li:hover {
+				background-color: rgba(0, 0, 0, 0.3);
+			} 
             main{
-                margin-left: 260px;
-                margin-right: 260px;
+                width: 55%;
+                margin-top: 5px;
+            }
+
+            .main{
+                display: flex;
+                justify-content: center;
+            }
+
+            .informacion{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .informacion input {
+                width: 250px;
+                margin: 3px 10px;
+                text-align: center;
+            }
+            .informacion label,
+            .pago label
+             {
+                margin-top: 4px;
+                text-align: center;
+            }
+            #idName {
+                margin-right: 20px;
+            }
+            .check {
+                display: flex;
+                justify-content: space-between;
+            }
+            .pago {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #idTarjeta {
+                width: 550px;
+            }
+            .pago input {
+                width: 180px;
+                margin: 3px 10px;
+                text-align: center;
+            }
+            
+            #idQuota {
+                margin: 3px;
+            }
+            .boton {
+                display: flex;
+                justify-content: center;
+            }
+            button {
+            width:  300px;
+            margin-top: 5px;
+            background-color: coral ;
+                border-color: coral;
+                border-radius: 15px;
             }
             fieldset {
-				border-color: aqua;
-                border-radius: 10px;
+				border-color: coral;
+                border-radius: 20px;
 			}
             legend {
-                color:aqua;
+                color:coral;
             }
-            #idSurname{
-                margin-bottom: 15px;
-                width: 300px;
-            }
-            #idName{
-                width: 340px;
-            }
-            #idNumero{
-                margin-bottom: 15px;
-                width: 300px;
-            }
-            #idDate{
-                width: 300px;
-            }
-            table{
-                margin-bottom: 15px;
-                width: 160%;
-                }
-            #idTarjeta{
-                margin-bottom: 15px;
-                width: 82%
-                }
-            #idMonth{
-                margin-bottom: 15px;
-                margin-right: 90px;
-            }
-            #idCodigo{
-                margin-right: 125px;
-            }
-            button{
-                margin-top: 15px;
-                margin-left: 250px;
-                width: 300px;
-                background-color: aqua;
-                border-color: aqua;
-                border-radius: 15px;
-            }         
-
         </style>
         
 	</head>
 	<body>
 		<header class="header">
-			<nav>
-				<ul>
+			<nav class="menu">
+				<label class="logo">Lamborghini</label>
+				<ul class="menu_item">
 					<li><a href="./Principal.html">Principal</a></li>
 					<li><a href="#">Suscribite</a></li>
 				</ul>
 			</nav>
 		</header>
+        <div class="main">
         <main>
             <section>
                 <form method="GET" action="suscripcion.php">
-                    <fieldset>
+                    <fieldset class="informacion">
                         <legend>Informacion personal</legend>
                         <label for='idSurname'>Apellido</label>
                         <input
@@ -88,8 +143,7 @@
                         name="Name"
                         placeholder='Ej: Hector'
                         required>
-                        </input><br>
-
+                        </input>
                         <label for='idNumero'>Telefono</label>
                         <input type='number'
                         name="numero"
@@ -99,41 +153,36 @@
                         required>
                         </input>
                         <label for='idDate'>Fecha de Nac.</label>
-                        <input type='date' id='idDate' name='fecha' required></input><br>
-
+                        <input type='date' id='idDate' name='fecha' required></input>
                         <label for='idEmail'>email</label>
                         <input type='email' id='idEmail'  name='email'required></input>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="check">
                         <legend>Suscripcion</legend>   
-                        <table>
-                            <tr>
-                                <td>
-                                    <lebel>Tipo:</lebel><br>
-                                    <label for='idGratis'>Gratis</label>
-                                    <input type='radio' id=idGratis name='Tipo' value='G'required></input>
-                                    <label for='idPlus'>Plus</label>
-                                    <input type='radio' id=idPlus name='Tipo'value='P'></input>
-                                    <label for='idPro'>Pro</label>
-                                    <input type='radio' id=idPro name='Tipo' value='Pr'></input>
-                                </td>
-                                <td>
-                                    <lebel>Intereses:</lebel><br>
-                                    <label for='idInteres1'>Interes 1</label>
-                                    <input type='checkbox' id=idInteres1 name='Interes1'></input>
-                                    <label for='idInteres2'>Interes 2</label>
-                                    <input type='checkbox' id=idInteres2 name='Interes2'></input>
-                                    <label for='idInteres3'>Interes 3</label>
-                                    <input type='checkbox' id=idInteres3 name='Interes3'></input>
-                                </td>
-                            </tr>
-                        </table>
+                        <div>
+                            <lebel>Tipo:</lebel><br>
+                            <label for='idGratis'>Gratis</label>
+                            <input type='radio' id=idGratis name='Tipo' value='G'required></input>
+                            <label for='idPlus'>Plus</label>
+                            <input type='radio' id=idPlus name='Tipo'value='P'></input>
+                            <label for='idPro'>Pro</label>
+                            <input type='radio' id=idPro name='Tipo' value='Pr'></input><br>
+                        </div>
+                        <div>
+                            <lebel>Intereses:</lebel><br>
+                            <label for='idInteres1'>Interes 1</label>
+                            <input type='checkbox' id=idInteres1 name='Interes1'></input>
+                            <label for='idInteres2'>Interes 2</label>
+                            <input type='checkbox' id=idInteres2 name='Interes2'></input>
+                            <label for='idInteres3'>Interes 3</label>
+                            <input type='checkbox' id=idInteres3 name='Interes3'></input> 
+                        </div>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="pago">
                         <legend>Pago</legend> 
                         <label for='idTarjeta'>Numero de tarjeta</label>
                         <input type='number' name="tarjeta" id='idTarjeta' min="1000000000000000" max="9999999999999999" required>
-                        </input><br>
+                        </input>
                         <label for='idMonth'>Fecha de Nac.</label>
                         <input type='month' id='idMonth' name='Month'required></input>
                         <label for='idCodigo'>Codigo de seg.</label>
@@ -146,9 +195,12 @@
                             <option value="12">12</option>
                         </select>
                     </fieldset>
-                    <button type="submit" >Enviar</button>
+                    <div class="boton">
+                        <button type="submit" >Enviar</button>
+                    </div> 
                 </form>
             </section>
         </main>
+        </div>
 	</body>
 </html>
