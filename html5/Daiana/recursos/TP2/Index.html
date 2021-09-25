@@ -7,7 +7,7 @@
 		<meta name="description" content="Curso HTML, CSS, JS, REACT" />
 		<title>Curso Web Development</title>
 	</head>
-	<body>
+	<body class="body">
 		<header class="header">
 			<h1>Juegos en línea</h1>
 			<h2>
@@ -22,22 +22,56 @@
 					</li>
 				</ul>
 			</nav>
+
+			<style>
+
+				.body{
+					background-color: lightcyan;
+				}
+
+				.header h1{
+					text-align: center;
+				}
+
+				.header h2{
+					text-align: center;
+				}
+
+				.video{
+					text-align: center;
+				}
+
+				.presentacion h2{
+					text-align: center;
+				}
+				.presentacion p{
+					text-align: center;
+				}
+
+				.tabla{
+					padding: 20px;					
+				}
+
+			</style>
+
 		</header>
-		<section>
-			<video autoplay muted loop width="600" height="600">
-				<source src="./aa1a2aec-fd50-4e1e-b5a3-c9b577b1c51c.mp4"/>
-			</video>
-		</section>
-		<main>
+		<div class="video">
 			<section>
+				<video autoplay muted loop width="600" height="600">
+					<source src="./aa1a2aec-fd50-4e1e-b5a3-c9b577b1c51c.mp4"/>
+				</video>
+			</section>
+		</div>
+		<main>
+			<section class="presentacion">
 				<h2>Xbox para windows</h2>
 				<p>
 					Descuentos exclusivos en juegos y complementos.
 					Puedes obtener tus juegos hasta con un 20% de descuento.
 				</p>
 			</section>
-			<section>
-				<table style="width:100%" border="1">
+			<section class="tabla">
+				<table border="1" >
 					<thead>
 						<tr align="center">
 							<th><h2>Free</h2</th>
