@@ -1,0 +1,89 @@
+<!-- Mini Examen Practico 1 - Duracion: 20 min.
+1- Dada la siguiente estructura HTML, deberá estilarla para que el resultado sea
+lo mas parecido a la imagen card.png
+2- Recuerde usar clases lo mas genéricas posibles, evite clases del tipo "div1" o similares.
+
+INFO adicional:
+colores:
+    sombra: #0005
+    linea separadora: #EEE
+    fondo de tarjeta: white
+    fondo de boton primario: blue
+    fondo de boton secundario: lightgrey
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Examen 1: Tarjeta</title>
+		<style>
+			body {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+			.card {
+				display: flex;
+				flex-direction: column;
+				width: 200px;
+				margin: 0 auto;
+				box-shadow: 0px 0px 5px #0005;
+				border-radius: 5px;
+				background-color: white;
+			}
+			.card-header,
+			.card-footer,
+			.card-body {
+				padding: 5px;
+			}
+			.card-header h2 {
+				margin: 0;
+			}
+			.card-body {
+				border-top: 1px solid #eee;
+				border-bottom: 1px solid #eee;
+			}
+			.card-footer form {
+				display: flex;
+				justify-content: flex-end;
+				gap: 10px;
+			}
+			.primary {
+				background-color: blue;
+				border: none;
+				border-radius: 5px;
+				color: white;
+				padding: 5px;
+			}
+			.secondary {
+				background-color: lightgrey;
+				border: none;
+				border-radius: 5px;
+				color: black;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				<h2>Card Title</h2>
+			</div>
+			<div class="card-body">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+				sollicitudin sem non lacus scelerisque scelerisque. Fusce id
+				volutpat sapien. Aliquam gravida tincidunt enim at consequat.
+				Nullam eu posuere velit. Etiam vitae sagittis libero, eu porta
+				odio.
+			</div>
+			<div class="card-footer">
+				<form>
+					<button class="primary">Aceptar</button>
+					<button class="secondary">Cancelar</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
