@@ -23,38 +23,70 @@ colores:
 		<style>
 			.body-tarjeta {
 				display: flex;
-				justify-content: center;
+				flex-wrap: wrap;
+				gap: 20px;
 			}
 
 			.tamaño-tarjeta {
-				box-shadow: 0px 0px 3px gray;
-				border-radius: 10px;
+				display: flex;
+				flex-direction: column;
 				width: 200px;
+				margin: 0 auto;
+				box-shadow: 0px 0px 5px #0005;
+				border-radius: 5px;
+				background-color: white;
 			}
 
-			/* .separacion {
-				border: 1px;
-				color: dimgray;
-			} */
+			.cabecera-tarjeta,
+			.footer-tarjeta,
+			.cuerpo-tarjeta {
+				padding: 5px;
+			}
+
+			.cabecera-tarjeta h2 {
+				margin: 0;
+			}
+
+			.cuerpo-tarjeta {
+				border-top: 2px solid #eee;
+				border-bottom: 2px solid #eee;
+			}
+
+			.footer-tarjeta form {
+				display: flex;
+				justify-content: end;
+				gap: 10px;
+			}
 
 			.BtnAceptar {
 				background-color: blue;
+				padding: 5px;
+				border-radius: 5px;
+				border: none;
+				color: white;
+			}
+
+			.BtnCancelar {
+				background-color: lightgrey;
+				padding: 5px;
+				border-radius: 5px;
+				border: none;
+				color: black;
 			}
 		</style>
 
 		<div class="tamaño-tarjeta">
-			<div class="separacion">
+			<div class="cabecera-tarjeta">
 				<h2>Card Title</h2>
 			</div>
-			<div class="separacion"></div>
-			<div>
+			<div class="cuerpo-tarjeta">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
 				sollicitudin sem non lacus scelerisque scelerisque. Fusce id
 				volutpat sapien. Aliquam gravida tincidunt enim at consequat.
 				Nullam eu posuere velit. Etiam vitae sagittis libero, eu porta
 				odio.
 			</div>
-			<div>
+			<div class="footer-tarjeta">
 				<form>
 					<button class="BtnAceptar">Aceptar</button>
 					<button class="BtnCancelar">Cancelar</button>
