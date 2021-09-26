@@ -4,117 +4,84 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CSS3 - Posicionamiento</title>
-
+		<title>CSS3 - Grid</title>
 		<style>
-			.flex-container {
-				display: flex;
+			.grid-container{
+				display: grid;
+				grid-template-columns: [row1-start] 300px [row1-end] 200px 100px;
+				grid-template-rows: 100px 200px;
+				grid-column-gap: 10px;
+				grid-row-gap: 30px;
+				grid-gap: 50px 30px;
+				height: 400px;
+				/* izq-der */
+				justify-items: center; 
+				/* arr-ab */
+				align-items: center;
+				/* arr-ab izq-der */
+				place-items: center center;
+				justify-content: space-around;
+				align-content: space-between;
+				place-content: center space-between;				
+				grid-auto-rows: 100px 200px;
+				grid-auto-columns: 100px 200px;
+				grid-auto-flow: dense;				
+			}
+			.grid-item{
+				background: lightblue;
+				
+				height:100px;
+			}
+			.areas{
+				display: grid;
+				grid-template-columns: 1fr 100px;
+				grid-template-areas: 
+				"header header"
+				"nav 	nav"
+				"main 	aside"				
+				"footer footer";
+			}
+			#header{
+				grid-area:header;
+				height: 100px;
+				background-color: red;				
+			}	
+			#nav{
+				grid-area:nav;
 				height: 40px;
+				background-color: blue;
 			}
-			.flex-row {
-				flex-direction: row;
+			#main{
+				grid-area:main;
+				height: 500px;				
+				background-color: green;
 			}
-			.flex-column {
-				flex-direction: column;
+			#footer{
+				grid-area:footer;
+				height: 100px;
+				background-color: hotpink;
 			}
-			.flex-row-reverse {
-				flex-direction: row-reverse;
-			}
-			.flex-column-reverse {
-				flex-direction: column-reverse;
-			}
-			.flex-wrap {
-				flex-wrap: wrap;
-			}
-			.flex-wrap-reverse {
-				flex-wrap: wrap-reverse;
-			}
-			.flex-nowrap {
-				flex-wrap: nowrap;
-			}
-			/* flex-flow e sun shortcut de flex-direccion + flex-wrap */
-			.flex-flow {
-				flex-flow: column wrap;
-			}
-			.flex-justify-content {
-				/* Alinea los elementos en el eje principal */
-				/* justify-content: flex-start; */
-				/* justify-content: flex-end; */
-				/* justify-content: center; */
-				/* justify-content: space-around; */
-				/* justify-content: space-between; */
-				justify-content: space-evenly;
-			}
-			.flex-align-items {
-				/* Alinea los elementos en el eje secundario */
-				/* align-items: flex-start; */
-				/* align-items: flex-end; */
-				/* align-items: center; */
-				align-items: stretch;
-			}
-			.flex-align-content {
-				/* Solo funciona con flex-wrap: wrap */
-				flex-wrap: wrap;
-				align-content: flex-end;
-			}
-			.flex-gap {
-				/* row-gap: 40px;
-				column-gap: 20px; */
-				gap: 30px 10px;
-			}
-			.margin {
-				margin-top: 10px;
-				margin-right: 10px;
-				margin-bottom: 10px;
-				margin-left: 10px;
-				/* margin: todos */
-				margin: 10px;
-				/* margin: ejeY ejeX */
-				margin: 10px 30px;
-				/* margin: top right bottom left */
-				margin: 10px 30px 60px 80px;
-			}
-			.padding {
-				padding-top: 10px;
-				padding-right: 10px;
-				padding-bottom: 10px;
-				padding-left: 10px;
-				/* padding: todos */
-				padding: 10px;
-				/* padding: ejeY ejeX */
-				padding: 10px 30px;
-				/* padding: top right bottom left */
-				padding: 10px 30px 60px 80px;
-			}
-			.border {
-				border-width: 50px 10px 5px 1px;
-				border-style: solid dotted dashed double; /* solid, dotted, dashed, groove, double */
-				border-color: blue red green black;
-				border: 5px solid red;
-				border-radius: 50px;
+			#aside{
+				grid-area:aside;				
+				background-color: cyan;
 			}
 		</style>
-	</head>
 	<body>
-		<h1>Propiedad Display : block</h1>
-		<div style="display: block">Esto es un Bloque</div>
-		<div>Otro Bloque</div>
-		<h1>Propiedad Display : inline</h1>
-		<div style="display: inline">Esto es un Bloque Inline</div>
-		<div style="display: inline">Otro Bloque</div>
-		<h1>Propiedad Display : inline-block</h1>
-		<div style="display: inline-block">Esto es un Bloque Inline Block</div>
-		<div style="display: inline-block">Otro Bloque</div>
-		<!-- FLEXBOX -->
-		<h1>Propiedad Display : flex</h1>
-		<!-- Es un Contenedor de otros elementos -->
-		<div class="flex-container" style="margin: 10px 20px">
-			<div style="">Elemento1</div>
-			<div style="align-self: flex-end">Elemento2</div>
-			<div style="">Elemento3</div>
+		<div class="grid-container">
+			<div class="grid-item">r1c1</div>
+			<div class="grid-item">r1c2</div>
+			<div class="grid-item">r1c3</div>
+			<div class="grid-item">r2c1</div>
+			<div class="grid-item">r2c2</div>
+			<div class="grid-item">r2c3</div>
 		</div>
-
-		<h1>Border</h1>
-		<div class="border"></div>
+		
+		<div class="areas" style="margin-top:500px">
+			<div id="header">Header</div>
+			<div id="nav">Nav</div>
+			<div id="main">Main</div>
+			<div id="footer">Footer</div>
+			<div id="aside">Aside</div>
+		</div>
 	</body>
 </html>
