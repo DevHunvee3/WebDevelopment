@@ -23,37 +23,64 @@ colores:
 				display: flex;
 				width: 200px;
 				flex-direction: column;
-				justify-content: center;
+				background-color: white;
 				box-shadow: 0px 0px 10px #0005;
 				border-radius: 10px;
-
-				padding-left: 10px;
 			}
 			body {
 				display: flex;
 				justify-content: center;
 			}
-			h2 {
+			.cabecera h2 {
+				margin: 0px;
 				border-bottom: 2px solid #eee;
+			}
+			.cabecera,
+			.cuerpo,
+			.pie {
+				padding: 5px;
+			}
+			.pie {
+				display: flex;
+				border-top: 2px solid #eee;
+				justify-content: flex-end;
+			}
+			.pie form {
+				display: flex;
+				gap: 10px;
+			}
+			.primario {
+				background-color: blue;
+				border: none;
+				border-radius: 5px;
+				color: white;
+				padding: 5px;
+			}
+			.secundario {
+				background-color: lightgrey;
+				border: none;
+				border-radius: 5px;
+				color: black;
+				padding: 5px;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="tarjeta">
-			<div>
+			<div class="cabecera">
 				<h2>Card Title</h2>
 			</div>
-			<div>
+			<div class="cuerpo">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
 				sollicitudin sem non lacus scelerisque scelerisque. Fusce id
 				volutpat sapien. Aliquam gravida tincidunt enim at consequat.
 				Nullam eu posuere velit. Etiam vitae sagittis libero, eu porta
 				odio.
 			</div>
-			<div>
+			<div class="pie">
 				<form>
-					<button>Aceptar</button>
-					<button>Cancelar</button>
+					<button class="primario">Aceptar</button>
+					<button class="secundario">Cancelar</button>
 				</form>
 			</div>
 		</div>

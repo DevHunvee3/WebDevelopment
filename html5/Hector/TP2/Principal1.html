@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Curso Web Development</title>
+		<style>
+			.menu {
+				background-color: #e9183b;
+				height: 75px;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			.logo {
+				color: white;
+				font-size: 35px;
+				font-weight: bold;
+				padding: 0 80px;
+			}
+			.menu_item {
+				display: flex;
+				list-style: none;
+				margin-right: 30px;
+			}
+			.menu_item li {
+				border-radius: 3px;
+				margin: 0 5px;
+			}
+			.menu_item li a {
+				padding: 7px 13px;
+				text-decoration: none;
+				font-size: 18px;
+				display: block;
+				color: white;
+			}
+			.menu_item li:hover {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+			.div1 {
+				display: flex;
+				gap: 15px;
+				background-color: seashell;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+				flex-wrap: wrap;
+			}
+			.section {
+				background-color: seashell;
+				padding-top: 25px;
+				padding-bottom: 25px;
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+
+				gap: 15px;
+			}
+			.video {
+				width: 100%;
+			}
+			.section h2 {
+				width: 95%;
+				padding: 10px;
+				background-color: silver;
+				box-shadow: 0px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			p {
+				width: 95%;
+				padding: 10px;
+				background-color: silver;
+				border-bottom: 1px solid #fff;
+				box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+			}
+			.section1 {
+				display: flex;
+				justify-content: space-around;
+				background-color: seashell;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+				flex-wrap: wrap;
+			}
+			.free {
+				background-color: silver;
+				box-shadow: 0px 0 10px rgba(0, 0, 0, 0.6);
+				display: flex;
+				flex-direction: column;
+				padding-left: 10px;
+				padding-right: 10px;
+				justify-content: space-between;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.a1 {
+				display: flex;
+				justify-content: center;
+				padding: 7px 50px;
+				text-decoration: none;
+				font-size: 18px;
+				background-color: #e9183b;
+				color: white;
+			}
+			.cuerpo {
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: center;
+			}
+			h2,
+			h6 {
+				margin-top: 15px;
+				margin-bottom: 0px;
+				font-size: 15px;
+				font-weight: bold;
+			}
+
+			.plus {
+				border: 1px solid black;
+			}
+			.pro {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="menu">
+				<label class="logo">Lamborghini</label>
+				<ul class="menu_item">
+					<li><a href="#">Principal</a></li>
+					<li><a href="./formulario.html">Suscribite</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="div1">
+				<section>
+					<video class="video" autoplay muted loop>
+						<source src="Lamborghini.mp4" />
+					</video>
+				</section>
+				<section class="section">
+					<h2>LANBORGHINI, un encuentro cercano del tercer tipo</h2>
+					<p>
+						Maybach se está volviendo eléctrico. En el IAA de
+						Múnich, Mercedes-Maybach muestra un concepto del SUV
+						Maybach EQS.<br />
+						Pero la versión de producción ya está confirmada. En
+						2022,<br />
+						Mercedes comenzará la producción del SUV EQS (con una
+						autonomía eléctrica de unos 600 km). <br />Un año
+						después, en 2023, se produce la versión Maybach del SUV
+						EQS.<br />
+						Ambas versiones se producen en la planta de
+						Mercedes-Benz en Tuscaloosa Alabama, EE. UU.
+					</p>
+				</section>
+			</div>
+			<section class="section1">
+				<div class="free">
+					<div class="cuerpo">
+						<h2>Free</h2>
+						<h6>$0</h6>
+						<ul>
+							<li>Aire Acondicionado</li>
+							<li>Air Bags</li>
+						</ul>
+					</div>
+					<a class="a1" href="Formulario.html">Comprar</a>
+				</div>
+				<div class="free">
+					<div class="cuerpo">
+						<h2>Plus</h2>
+						<h6>$10.000</h6>
+						<ul>
+							<li>Aire Acondicionado</li>
+							<li>Air Bags</li>
+							<li>Caja de sexta</li>
+							<li>Camara tracera</li>
+						</ul>
+					</div>
+					<a class="a1" href="Formulario.html">Comprar</a>
+				</div>
+				<div class="free">
+					<div class="cuerpo">
+						<h2>Pro</h2>
+						<h6>$20.000</h6>
+						<ul>
+							<li>Aire Acondicionado</li>
+							<li>Air Bags</li>
+							<li>Caja de sexta</li>
+							<li>Camara tracera</li>
+							<li>Frenos sincronizados</li>
+							<li>Computadora A Bordo</li>
+							<li>Llantas de fibra de carbono</li>
+						</ul>
+					</div>
+					<a class="a1" href="Formulario.html">Comprar</a>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
