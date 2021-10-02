@@ -1,0 +1,161 @@
+<!-- Challenge - Card
+1- Intente replicar la tarjeta expuesta en la imagen "burger-card"
+2- Recuerde usar clases lo mas genéricas posibles, evite clases del tipo "div1" o similares.
+
+INFO adicional:
+colores:
+	fondo: rgb(233, 233, 233)
+    sombra: #0002
+    rojo: crimson
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Challenge 1 - Card</title>
+	</head>
+	<body>
+		<style>
+			body {
+				background-color: rgb(233, 233, 233);
+			}
+
+			.Card-container {
+				display: flex;
+				flex-direction: column;
+				width: 250px;
+				margin: 0 auto;
+				box-shadow: 0px 0px 5px #0002;
+				border-radius: 15px;
+				background-color: white;
+				padding: 10px;
+			}
+
+			.image {
+				width: 150px;
+				height: 120px;
+				display: block;
+				margin: auto;
+			}
+
+			.burger-count {
+				background-color: crimson;
+				color: white;
+				border-radius: 20px;
+				gap: 20px;
+				border: none;
+				padding: 7px;
+				display: flex;
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+
+			.Add {
+				background-color: crimson;
+				color: white;
+				border-radius: 20px;
+				gap: 20px;
+				border: none;
+				padding: 10px;
+				display: flex;
+				padding-left: 80px;
+				padding-right: 80px;
+			}
+
+			.card-button-count,
+			.card-button-add {
+				display: flex;
+				justify-content: center;
+			}
+
+			.burger-name {
+				grid-area: name;
+			}
+			.burger-price {
+				text-align: end;
+				grid-area: price;
+			}
+			.burger-time {
+				grid-area: time;
+				padding: 8px;
+			}
+			.burger-stars {
+				grid-area: stars;
+				padding: 8px;
+			}
+			.burger-cal {
+				grid-area: cal;
+				padding: 8px;
+			}
+
+			.card-description {
+				grid-area: desc;
+				padding-bottom: 10px;
+			}
+
+			.grid-container {
+				display: grid;
+				grid-template-areas:
+					'name  name name name price'
+					'time time stars cal cal '
+					'desc desc desc desc desc';
+			}
+
+			.img-time {
+				width: 18px;
+				height: 18px;
+			}
+
+			.img-stars {
+				width: 18px;
+				height: 18px;
+			}
+
+			.img-cal {
+				width: 18px;
+				height: 18px;
+			}
+		</style>
+
+		<div class="Card-container">
+			<div class="Card-header">
+				<img src="./img/burger.png" alt="Burger" class="image" />
+			</div>
+
+			<div class="card-button-count">
+				<button class="burger-count">- 1 +</button>
+			</div>
+			<div class="grid-container">
+				<div class="burger-name">Chicken Mania</div>
+
+				<div class="burger-price">$6.59</div>
+
+				<div class="burger-time">
+					<img src="./img/time.png" alt="Demora" class="img-time" />
+					50 min
+				</div>
+
+				<div class="burger-stars">
+					<img src="./img/rate.png" alt="Stars" class="img-stars" />
+					4.5
+				</div>
+
+				<div class="burger-cal">
+					<img src="./img/cal.png" alt="Calories" class="img-cal" />
+					150 Kcal
+				</div>
+
+				<div class="card-description">
+					Enjoy the crispy chicken fillet in a soft bun with spicy
+					mayo and our signature sause with fresh lettuce.
+				</div>
+			</div>
+			<div class="card-button-add">
+				<button class="Add">Add to Cart</button>
+			</div>
+		</div>
+	</body>
+</html>

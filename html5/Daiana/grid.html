@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			.grid div {
+				background: #ecf0f1;
+				padding: 1em;
+			}
+
+			.grid div:hover {
+				border: 1px solid #f1c40f;
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: auto 33% 33%;
+				grid-template-rows: 200px 400px;
+				gap: 20px;
+				/* column gap / row gap para aplicar separación*/
+				/*se pueden usar fracciones 1fr 1fr para indicar que se divida en 2, 
+                o podemos usar la parala reservada repeat(6, 1fr) 
+                esto quiere decir que 1fr se repita 6 veces*
+                se puede escribir div*6{algo}*/
+			}
+		</style>
+
+		<div class="grid">
+			<div>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+				Tempore voluptatum illo nesciunt nemo ducimus consequuntur optio
+				expedita doloribus mollitia voluptate, corporis, cumque
+				cupiditate id? Aliquid excepturi magni ullam libero facere.
+			</div>
+
+			<div>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+				quo libero sint dolor excepturi ipsa dolore exercitationem!
+				Eligendi possimus blanditiis dolore consequuntur quo modi libero
+				hic quae ducimus illo. Odio!
+			</div>
+
+			<div>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+				quo libero sint dolor excepturi ipsa dolore exercitationem!
+				Eligendi possimus blanditiis dolore consequuntur quo modi libero
+				hic quae ducimus illo. Odio!
+			</div>
+			<div>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+				Tempore voluptatum illo nesciunt nemo ducimus consequuntur optio
+				expedita doloribus mollitia voluptate, corporis, cumque
+				cupiditate id? Aliquid excepturi magni ullam libero facere.
+			</div>
+
+			<div>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+				quo libero sint dolor excepturi ipsa dolore exercitationem!
+				Eligendi possimus blanditiis dolore consequuntur quo modi libero
+				hic quae ducimus illo. Odio!
+			</div>
+
+			<div>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+				quo libero sint dolor excepturi ipsa dolore exercitationem!
+				Eligendi possimus blanditiis dolore consequuntur quo modi libero
+				hic quae ducimus illo. Odio!
+			</div>
+		</div>
+	</body>
+</html>
