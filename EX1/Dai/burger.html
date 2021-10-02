@@ -41,23 +41,11 @@ colores:
 				margin: auto;
 			}
 
-			.burger-count {
-				background-color: crimson;
-				color: white;
-				border-radius: 20px;
-				gap: 20px;
-				border: none;
-				padding: 7px;
-				display: flex;
-				padding-left: 25px;
-				padding-right: 25px;
-			}
-
 			.Add {
 				background-color: crimson;
 				color: white;
 				border-radius: 20px;
-				gap: 20px;
+				gap: 10px;
 				border: none;
 				padding: 10px;
 				display: flex;
@@ -73,11 +61,25 @@ colores:
 
 			.burger-name {
 				grid-area: name;
+				padding-top: 10px;
+				padding-bottom: 10px;
 			}
+
 			.burger-price {
-				text-align: end;
+				text-align: left;
 				grid-area: price;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				width: 0px;
 			}
+
+			.burger-signo {
+				color: crimson;
+				grid-area: signo;
+				padding-top: 10px;
+				text-align: end;
+			}
+
 			.burger-time {
 				grid-area: time;
 				padding: 8px;
@@ -93,13 +95,14 @@ colores:
 
 			.card-description {
 				grid-area: desc;
-				padding-bottom: 10px;
+				padding-bottom: 20px;
+				padding-top: 10px;
 			}
 
 			.grid-container {
 				display: grid;
 				grid-template-areas:
-					'name  name name name price'
+					'name  name name signo price'
 					'time time stars cal cal '
 					'desc desc desc desc desc';
 			}
@@ -118,6 +121,38 @@ colores:
 				width: 18px;
 				height: 18px;
 			}
+
+			.btnsum,
+			.btnres,
+			.cantidad {
+				border: none;
+			}
+
+			.btnsum,
+			.btnres {
+				background-color: crimson;
+				color: white;
+				border: none;
+				padding: 7px;
+				display: flex;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			.btnsum {
+				border-radius: 20px 0px 0px 20px;
+			}
+
+			.btnres {
+				border-radius: 0px 20px 20px 0px;
+			}
+
+			.cantidad {
+				text-align: center;
+				background-color: crimson;
+				color: white;
+				width: 20px;
+			}
 		</style>
 
 		<div class="Card-container">
@@ -126,12 +161,15 @@ colores:
 			</div>
 
 			<div class="card-button-count">
-				<button class="burger-count">- 1 +</button>
+				<button class="btnsum" type="button" id="menos">-</button>
+				<input id="cantidad" type="text" value="1" class="cantidad" />
+				<button class="btnres" type="button" id="mas">+</button>
 			</div>
 			<div class="grid-container">
 				<div class="burger-name">Chicken Mania</div>
 
-				<div class="burger-price">$6.59</div>
+				<div class="burger-signo">$</div>
+				<div class="burger-price">6.59</div>
 
 				<div class="burger-time">
 					<img src="./img/time.png" alt="Demora" class="img-time" />
