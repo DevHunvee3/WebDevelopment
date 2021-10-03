@@ -4,84 +4,175 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CSS3 - Grid</title>
+		<title>CSS3 - Position</title>
 		<style>
-			.grid-container{
-				display: grid;
-				grid-template-columns: [row1-start] 300px [row1-end] 200px 100px;
-				grid-template-rows: 100px 200px;
-				grid-column-gap: 10px;
-				grid-row-gap: 30px;
-				grid-gap: 50px 30px;
-				height: 400px;
-				/* izq-der */
-				justify-items: center; 
-				/* arr-ab */
-				align-items: center;
-				/* arr-ab izq-der */
-				place-items: center center;
-				justify-content: space-around;
-				align-content: space-between;
-				place-content: center space-between;				
-				grid-auto-rows: 100px 200px;
-				grid-auto-columns: 100px 200px;
-				grid-auto-flow: dense;				
-			}
-			.grid-item{
-				background: lightblue;
-				
-				height:100px;
-			}
-			.areas{
-				display: grid;
-				grid-template-columns: 1fr 100px;
-				grid-template-areas: 
-				"header header"
-				"nav 	nav"
-				"main 	aside"				
-				"footer footer";
-			}
-			#header{
-				grid-area:header;
+			.relative{
+				position: relative;
 				height: 100px;
-				background-color: red;				
-			}	
-			#nav{
-				grid-area:nav;
-				height: 40px;
+				background-color: red;
+			}
+			.absolute{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				bottom:0px;
+				right:0px;
 				background-color: blue;
 			}
-			#main{
-				grid-area:main;
-				height: 500px;				
+			.fixed{
+				position: fixed;
+				bottom:0px;
+				left:0px;
+				width: 100px;
+				height: 100px;
 				background-color: green;
 			}
-			#footer{
-				grid-area:footer;
+			.sticky{				
+				position: sticky;
+				top:0px;
+				left:0px;
+				width: 100px;
 				height: 100px;
-				background-color: hotpink;
-			}
-			#aside{
-				grid-area:aside;				
-				background-color: cyan;
+				background-color: rebeccapurple;
 			}
 		</style>
 	<body>
-		<div class="grid-container">
-			<div class="grid-item">r1c1</div>
-			<div class="grid-item">r1c2</div>
-			<div class="grid-item">r1c3</div>
-			<div class="grid-item">r2c1</div>
-			<div class="grid-item">r2c2</div>
-			<div class="grid-item">r2c3</div>
-		</div>
-		
-		<div class="areas" style="margin-top:500px">
-			<div id="header">Header</div>
-			<div id="nav">Nav</div>
-			<div id="main">Main</div>
-			<div id="footer">Footer</div>
-			<div id="aside">Aside</div>
-		</div>
+		<h1>Position</h1>
+		<h2>Relative</h2>
+		<div class="relative"></div>
+		<hr/>
+		<h2>Absolute</h2>
+		<div class="absolute"></div>
+		<hr/>
+		<h2>Fixed</h2>
+		<div class="fixed"></div>
+		<h2>Sticky</h2>
+		<div class="sticky"></div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
 	</body>
 </html>
