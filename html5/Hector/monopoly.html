@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Monopoly</title>
+		<style>
+			.monopoly-board {
+				display: grid;
+				grid-template-columns: 100px 20px repeat(9, 50px) 20px 100px;
+				grid-template-rows: 100px 20px repeat(9, 50px) 20px 80px;
+				padding: 15px;
+				justify-content: center;
+				align-content: center;
+			}
+			.tile {
+				width: 100%;
+				height: 100%;
+				border: 2px solid black;
+			}
+			.tile1 {
+				width: 100%;
+				height: 100%;
+				border: 2px solid black;
+				grid-column: 1 / span 2;
+				grid-row: 1 / span 2;
+			}
+			.tile12 {
+				width: 100%;
+				height: 100%;
+				border: 2px solid black;
+				grid-column: 12 / span 2;
+				grid-row: 1 / span 2;
+			}
+			.tile68 {
+				width: 100%;
+				height: 100%;
+				border: 2px solid black;
+				grid-column: 1 / span 2;
+				grid-row: 12 / span 2;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr 1fr;
+			}
+			.tile79 {
+				width: 100%;
+				height: 100%;
+				border: 2px solid black;
+				grid-column: 12 / span 2;
+				grid-row: 12 / span 2;
+			}
+			.tile68-2 {
+				width: 100%;
+				height: 100%;
+				border-left: 2px solid black;
+				border-bottom: 2px solid black;
+			}
+			.center-tile {
+				grid-column: 3 / span 9;
+				grid-row: 3 / span 9;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="monopoly-board">
+			<div class="tile1">1</div>
+
+			<div class="tile">3</div>
+			<div class="tile">4</div>
+			<div class="tile">5</div>
+			<div class="tile">6</div>
+			<div class="tile">7</div>
+			<div class="tile">8</div>
+			<div class="tile">9</div>
+			<div class="tile">10</div>
+			<div class="tile">11</div>
+			<div class="tile12">12</div>
+
+			<div class="tile">16</div>
+			<div class="tile">17</div>
+			<div class="tile">18</div>
+			<div class="tile">19</div>
+			<div class="tile">20</div>
+			<div class="tile">21</div>
+			<div class="tile">22</div>
+			<div class="tile">23</div>
+
+			<div class="tile">26</div>
+			<div class="tile">27</div>
+			<div class="tile">28</div>
+			<div class="tile">29</div>
+			<div class="tile">30</div>
+			<div class="tile">31</div>
+			<div class="tile">32</div>
+			<div class="tile">33</div>
+			<div class="tile">34</div>
+			<div class="tile">35</div>
+			<div class="tile">36</div>
+			<div class="tile center-tile">37</div>
+			<div class="tile">38</div>
+			<div class="tile">39</div>
+			<div class="tile">40</div>
+			<div class="tile">41</div>
+			<div class="tile">42</div>
+			<div class="tile">43</div>
+			<div class="tile">44</div>
+			<div class="tile">45</div>
+			<div class="tile">46</div>
+			<div class="tile">47</div>
+			<div class="tile">48</div>
+			<div class="tile">49</div>
+			<div class="tile">50</div>
+			<div class="tile">55</div>
+			<div class="tile">56</div>
+			<div class="tile">57</div>
+			<div class="tile">58</div>
+			<div class="tile">59</div>
+			<div class="tile">60</div>
+			<div class="tile">61</div>
+			<div class="tile">62</div>
+			<div class="tile">63</div>
+			<div class="tile">64</div>
+			<div class="tile">65</div>
+			<div class="tile">66</div>
+			<div class="tile">67</div>
+			<div class="tile68">
+				<div class="tile68-1">68-1</div>
+				<div class="tile68-2">68-2</div>
+				<div class="tile68-3">68-3</div>
+				<div class="tile68-4">68-4</div>
+			</div>
+			<div class="tile">70</div>
+			<div class="tile">71</div>
+			<div class="tile">72</div>
+			<div class="tile">73</div>
+			<div class="tile">74</div>
+			<div class="tile">75</div>
+			<div class="tile">76</div>
+			<div class="tile">77</div>
+			<div class="tile">78</div>
+			<div class="tile79">79</div>
+
+			<div class="tile">83</div>
+			<div class="tile">84</div>
+			<div class="tile">85</div>
+			<div class="tile">86</div>
+			<div class="tile">87</div>
+			<div class="tile">88</div>
+			<div class="tile">89</div>
+			<div class="tile">90</div>
+			<div class="tile">91</div>
+		</div>
+	</body>
+</html>
