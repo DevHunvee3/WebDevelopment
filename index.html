@@ -4,175 +4,89 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CSS3 - Position</title>
-		<style>
-			.relative{
-				position: relative;
-				height: 100px;
-				background-color: red;
-			}
-			.absolute{
-				position: absolute;
-				width: 100px;
-				height: 100px;
-				bottom:0px;
-				right:0px;
-				background-color: blue;
-			}
-			.fixed{
-				position: fixed;
-				bottom:0px;
-				left:0px;
-				width: 100px;
-				height: 100px;
-				background-color: green;
-			}
-			.sticky{				
-				position: sticky;
-				top:0px;
-				left:0px;
-				width: 100px;
-				height: 100px;
-				background-color: rebeccapurple;
-			}
-		</style>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<title>Textos</title>
+	</head>
+	<style>
+		.text-color {
+			color: red;
+		}
+		.text-align {
+			text-align: center;
+		}
+		.text-direction {
+			direction: rtl;
+			unicode-bidi: bidi-override;
+		}
+		.text-decoration {
+			text-decoration: none;
+			text-decoration: underline;
+			text-decoration: line-through;
+			text-decoration: overline;
+		}
+		.text-transform {
+			text-transform: capitalize;
+			text-transform: lowercase;
+			text-transform: uppercase;
+		}
+		.letter-spacing {
+			letter-spacing: 10px;
+		}
+		.text-indent {
+			text-indent: 10px;
+		}
+		.text-shadow {
+			text-shadow: 0px 0px 5px red;
+			color: white;
+		}
+		@font-face {
+			font-family: 'Ephesis';
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/ephesis/v1/uU9PCBUS8IerL2VG3xTR3w.woff2)
+				format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+				U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+				U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+		.font {
+			font-family: 'Ephesis', sans-serif;
+			font-size: 1rem;
+			font-style: italic;
+			font-weight: bold;
+			/* font-variant: small-caps; */
+		}
+	</style>
 	<body>
-		<h1>Position</h1>
-		<h2>Relative</h2>
-		<div class="relative"></div>
-		<hr/>
-		<h2>Absolute</h2>
-		<div class="absolute"></div>
-		<hr/>
-		<h2>Fixed</h2>
-		<div class="fixed"></div>
-		<h2>Sticky</h2>
-		<div class="sticky"></div>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
+		<p class="text-color">Propiedad Color</p>
+		<div class="text-color">
+			Div Padre
+			<p>Parrafo Hijo</p>
+			<div>
+				Div Primer Hijo
+				<div>Div Segundo Hijo</div>
+				<h1>H1</h1>
+			</div>
+		</div>
+		<p class="text-align">Propiedad text-align</p>
+		<p class="text-direction">Propiedad direction</p>
+		<p class="text-decoration">Propiedad text-decoration</p>
+		<p class="text-transform">Propiedad text-transform</p>
+		<p class="letter-spacing">Propiedad letter-spacing</p>
+		<p class="text-indent">Propiedad text-indent</p>
+		<p class="text-shadow">Propiedad text-shadow</p>
+
+		<h1>FUENTES</h1>
+		<p class="font">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at
+			dictum sapien. Orci varius natoque penatibus et magnis dis
+			parturient montes, nascetur ridiculus mus. Duis vulputate urna enim,
+			ut aliquet felis ultrices nec. Sed suscipit luctus mauris, in cursus
+			felis pharetra sit amet. Cras ligula urna, volutpat eleifend risus
+			at, tristique varius velit. Phasellus sollicitudin massa non
+			malesuada luctus. Aliquam posuere egestas felis vitae interdum.
+			Interdum et malesuada fames ac ante ipsum primis in faucibus.
+		</p>
 	</body>
 </html>
