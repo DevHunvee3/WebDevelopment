@@ -1,0 +1,22 @@
+.container {
+	height: 300px;
+	width: 300px;
+	background-color: red;
+	transition: 0.25s ease-in-out;
+}
+/* 
+x HASTA y
+0px hasta 200px
+200px hasta inf
+*/
+/* 
+mobile first
+desktop first
+*/
+/* Breakpoints */
+@media (min-width: 768px) {
+	.container {
+		background-color: rgb(4, 0, 255);
+		width: 600px;
+	}
+}
