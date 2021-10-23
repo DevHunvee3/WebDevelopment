@@ -9,157 +9,44 @@
 	</head>
 	<style>
 		body {
-			background-color: lightsalmon;
+			--main_color: #dbccff;
+			--table_columns: 1;
 		}
-		img:not(.object-fit) {
+		.col-2 {
+			--table_columns: 2;
+		}
+		.grid {
+			grid-template-columns: repeat(1fr, var(--grid-columns));
+		}
+
+		body.dark {
+			--main_color: #3d2b66;
+		}
+		.container1 {
+			--main_color: #ff0000;
 			width: 300px;
+			height: 300px;
+			background-color: var(--main_color);
 		}
-		.opacity {
-			opacity: 0.5;
+		.container1 .subcontainer {
+			--main_color: #00ff4c;
+			width: 100px;
+			height: 100px;
+			background-color: var(--main_color);
 		}
-		.filter {
-			/* desenfoque/borroneado */
-			filter: blur(5px);
-			/* brillo */
-			filter: brightness(150%);
-			/* contraste */
-			filter: contrast(250%);
-			/* blanco-negro */
-			filter: grayscale(100%);
-			/* rotacion de tinte*/
-			filter: hue-rotate(50deg);
-			/* negativo*/
-			filter: invert(100%);
-			/* opacidad*/
-			filter: opacity(50%);
-			/* saturacion*/
-			filter: saturate(7);
-			/*sepia*/
-			filter: sepia(100%);
-			/*sombra*/
-			filter: drop-shadow(5px 5px 10px black);
-		}
-		.img-container {
-			width: 200px;
-			height: 200px;
-		}
-		.object-fit {
-			width: 100%;
-			height: 100%;
-			/* object-fit: fill;
-			object-fit: contain;
-			object-fit: scale-down; */
-			object-fit: cover;
-			object-position: 10px 10px 10px 10px;
-		}
-		.background {
-			background-image: url('https://slp-statics.astockcdn.net/static_assets/staging/21fall/homepage/curated-asset-collection/card-2.jpg?width=580');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-attachment: local;
-		}
-		.tranform {
-			transform: translate(200px, 100px);
-			transform: rotate(45deg);
-			transform: rotateX(45deg);
-			transform: rotateY(45deg);
-			transform: skew(45deg, 0deg);
-			transform: scale(0.5, 0.5) rotate(45deg);
-		}
-
-		.transition img {
-			opacity: 0.5;
-			width: 50px;
-			transition-property: opacity;
-			transition-duration: 2s;
-			transition-timing-function: ease-in;
-			transition-delay: 5s;
-			transition: opacity 2s ease-in 0s;
-			transition: 2s;
-		}
-		.transition img:hover {
-			opacity: 1;
+		.container2 {
 			width: 300px;
-		}
-		@keyframes animate {
-			from {
-				opacity: 0.5;
-			}
-			to {
-				opacity: 0;
-			}
-		}
-		.keyframes {
-			animation-name: animate;
-			animation-duration: 2s;
-			animation-timing-function: ease-in-out;
-			animation-delay: 2s;
-
-			animation-fill-mode: forwards;
-			animation-fill-mode: backwards;
-			animation-fill-mode: both;
-
-			animation-iteration-count: 2;
-			animation-iteration-count: infinite;
-			animation-direction: normal;
-			animation-direction: reverse;
-			animation-direction: alternate;
+			height: 300px;
+			background-color: var(--main_color);
 		}
 	</style>
 	<body>
-		<h1>Image Styling</h1>
-		<h2>Propiedad Opacity</h2>
-		<img
-			class="opacity"
-			src="https://slp-statics.astockcdn.net/static_assets/staging/21fall/homepage/curated-asset-collection/card-2.jpg?width=580"
-			alt="perrito durmiendo"
-		/>
-		<h2>Propiedad Filter</h2>
-		<img
-			class="filter"
-			src="https://slp-statics.astockcdn.net/static_assets/staging/21fall/homepage/curated-asset-collection/card-2.jpg?width=580"
-			alt="perrito durmiendo"
-		/>
-		<h2>Propiedad Object-fit</h2>
-		<div class="img-container">
-			<img
-				class="object-fit"
-				src="https://slp-statics.astockcdn.net/static_assets/staging/21fall/homepage/curated-asset-collection/card-2.jpg?width=580"
-				alt="perrito durmiendo"
-			/>
+		<h1>Variables</h1>
+		<div class="container1">
+			<div class="subcontainer"></div>
 		</div>
-		<div class="img-container">
-			<img
-				class="object-fit"
-				src="https://i.pinimg.com/originals/3d/b7/7d/3db77df2a496f33b09c1861acc7a7b1c.jpg"
-			/>
-		</div>
-		<h2>Propiedad background</h2>
-		<div class="img-container background">
-			<p style="color: white"></p>
-		</div>
-		<h2>Propiedad Transform</h2>
-		<div class="img-container tranform">
-			<img
-				class="object-fit"
-				src="https://i.pinimg.com/originals/3d/b7/7d/3db77df2a496f33b09c1861acc7a7b1c.jpg"
-			/>
-		</div>
-		<h2>Propiedad Transition</h2>
-		<div class="img-container transition">
-			<img
-				class="object-fit"
-				src="https://i.pinimg.com/originals/3d/b7/7d/3db77df2a496f33b09c1861acc7a7b1c.jpg"
-			/>
-		</div>
-		<h2>Propiedad Keyframes</h2>
-		<div class="img-container keyframes">
-			<img
-				class="object-fit"
-				src="https://i.pinimg.com/originals/3d/b7/7d/3db77df2a496f33b09c1861acc7a7b1c.jpg"
-			/>
-		</div>
+		<div class="container2"></div>
+		<div class="grid col-2"></div>
 	</body>
 </html>
 <!-- comentarios -> ctrl + k + c -->
