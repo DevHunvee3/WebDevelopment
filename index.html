@@ -82,6 +82,30 @@
 			opacity: 1;
 			width: 300px;
 		}
+		@keyframes animate {
+			from {
+				opacity: 0.5;
+			}
+			to {
+				opacity: 0;
+			}
+		}
+		.keyframes {
+			animation-name: animate;
+			animation-duration: 2s;
+			animation-timing-function: ease-in-out;
+			animation-delay: 2s;
+
+			animation-fill-mode: forwards;
+			animation-fill-mode: backwards;
+			animation-fill-mode: both;
+
+			animation-iteration-count: 2;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+			animation-direction: reverse;
+			animation-direction: alternate;
+		}
 	</style>
 	<body>
 		<h1>Image Styling</h1>
@@ -124,6 +148,13 @@
 		</div>
 		<h2>Propiedad Transition</h2>
 		<div class="img-container transition">
+			<img
+				class="object-fit"
+				src="https://i.pinimg.com/originals/3d/b7/7d/3db77df2a496f33b09c1861acc7a7b1c.jpg"
+			/>
+		</div>
+		<h2>Propiedad Keyframes</h2>
+		<div class="img-container keyframes">
 			<img
 				class="object-fit"
 				src="https://i.pinimg.com/originals/3d/b7/7d/3db77df2a496f33b09c1861acc7a7b1c.jpg"
