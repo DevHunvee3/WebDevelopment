@@ -2,6 +2,41 @@
 	margin: 0;
 	padding: 0;
 }
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2)
+		format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2)
+		format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: 'Lexend Deca';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/lexenddeca/v10/K2FifZFYk-dHSE0UPPuwQ7CrD94i-NCKm-U48M1wqxnD.woff2)
+		format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+}
+
 body {
 	background-color: hsl(233, 47%, 7%);
 	padding: 0 1rem;
@@ -11,22 +46,114 @@ body {
 	background-color: hsl(244, 38%, 16%);
 	border-radius: 10px;
 	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 2rem;
 }
-.card img {
+/* .card img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
-}
+} */
 .card .image-container {
 	width: 100%;
-	height: 252px;
+	height: 240px;
 	position: relative;
+	background: linear-gradient(
+			0deg,
+			hsl(277, 64%, 61%, 0.5),
+			hsl(277, 64%, 61%, 0.5)
+		),
+		url(../resources/imgs/image-header-mobile.jpg);
+	/* background: url(../resources/imgs/image-header-mobile.jpg); */
+	/* box-shadow: inset 0 0 0 2000px hsl(277, 64%, 61%, 0.3); */
+	background-size: contain;
 }
-.card .image-container .backdrop {
+/* .card .image-container .backdrop {
 	background-color: hsl(277deg 100% 30% / 55%);
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
+} */
+.card-body {
+	padding: 3rem 1.4rem;
+}
+.card-header,
+.card-description,
+.card-footer {
+	color: white;
+}
+.card-header {
+	font-family: Inter;
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.card-header span {
+	color: hsl(277, 64%, 61%);
+}
+.card-description {
+	font-family: Inter;
+	font-size: 1rem;
+	text-align: center;
+	color: hsla(0, 0%, 100%, 0.75);
+	margin-bottom: 3rem;
+}
+.card-footer {
+	font-family: Inter;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+.card-footer p {
+	text-align: center;
+	font-size: 1.7rem;
+	font-weight: 700;
+	max-width: 150px;
+}
+.card-footer span {
+	font-family: 'Lexend Deca';
+	font-size: 1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: hsla(0, 0%, 100%, 0.6);
+	letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1440px) {
+	.card {
+		display: flex;
+		flex-direction: row-reverse;
+		max-width: 60rem;
+	}
+	.card .image-container {
+		height: initial;
+		background: linear-gradient(
+				0deg,
+				hsl(277, 64%, 61%, 0.5),
+				hsl(277, 64%, 61%, 0.5)
+			),
+			url(../resources/imgs/image-header-desktop.jpg);
+	}
+	.card .image-container {
+		width: 50%;
+	}
+	.card .card-body {
+		width: calc(50% - 9rem);
+		padding: 3rem 6rem 3rem 3rem;
+	}
+	.card .card-footer {
+		flex-direction: row;
+	}
+	.card .card-footer p,
+	.card .card-header,
+	.card .card-description {
+		text-align: left;
+	}
+	.card .card-description {
+		margin-bottom: 5rem;
+	}
 }
