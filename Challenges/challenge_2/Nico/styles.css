@@ -1,10 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Josefin Sans';
-}
-
 @font-face {
 	font-family: 'Josefin Sans';
 	font-style: normal;
@@ -28,10 +21,28 @@
 		U+2215, U+FEFF, U+FFFD;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Josefin Sans';
+}
+
+:root {
+	--app-with: 550px;
+	--Very-Light-Gray: hsl(0, 0%, 98%);
+	--Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+	--Light-Grayish-Blue: hsl(233, 11%, 84%);
+	--Dark-Grayish-Blue: hsl(236, 9%, 61%);
+	--Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+	--Paper-Background: white;
+	--Text-Font-Size: 1.5rem;
+}
+
 body {
 	width: 100%;
 	min-height: 500px;
-	background-color: hsl(0, 0%, 98%);
+	background-color: var(--Very-Light-Gray);
 	background-image: url('../resources/imgs/bg-desktop-light.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -41,8 +52,9 @@ body {
 }
 
 .contained {
-	width: 550px;
+	width: var(--app-with);
 }
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -58,4 +70,46 @@ header button {
 	height: 26px;
 	background: url('../resources/imgs/icon-moon.svg');
 	border: none;
+}
+.paper {
+	background-color: var(--Paper-Background);
+	box-shadow: 0 0 15px hsl(0deg 0% 0% / 32%);
+	border-radius: 5px;
+}
+#create-form {
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+.todo {
+	display: flex;
+	color: var(--Very-Dark-Grayish-Blue);
+	font-size: var(--Text-Font-Size);
+	width: 100%;
+	background: none;
+	border: none;
+	padding: 1.5rem 1rem;
+	align-items: center;
+}
+
+.todo label {
+	flex-grow: 1;
+}
+.todo::placeholder {
+	color: var(--Dark-Grayish-Blue);
+	font-size: var(--Text-Font-Size);
+}
+.todo input[type='checkbox'] {
+	width: 20px;
+	height: 20px;
+	margin-right: 1rem;
+}
+input[type='checkbox']:checked + label {
+	color: var(--Very-Light-Grayish-Blue);
+	text-decoration: line-through;
+}
+/* :first-child */
+/* :nth-child(number) */
+/* :last-child */
+#todo-list .todo:not(:last-child) {
+	border-bottom: 1px solid var(--Very-Light-Grayish-Blue);
 }
